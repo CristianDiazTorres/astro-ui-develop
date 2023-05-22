@@ -1,0 +1,71 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  border-top: 1px solid var(--color-neutral-40);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 12px;
+
+  @include tablet-landscape {
+    padding: 24px;
+  }
+}
+
+.selector {
+  margin-right: 12px;
+}
+
+.menu {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-width: unset;
+  padding: 0 24px;
+}
+
+.icon {
+  width: 24px;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+.listItem {
+  @extend %caption1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectedItem.selectedItem {
+  @extend %body2;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 8px;
+  max-width: 100px;
+  overflow: hidden;
+}
+
+.menuClassName {
+  width: 100%;
+}
+
+.ellipsed {
+  @include ellipse-text;
+}
+
+.label {
+  @include centralize;
+  min-width: 80px;
+}

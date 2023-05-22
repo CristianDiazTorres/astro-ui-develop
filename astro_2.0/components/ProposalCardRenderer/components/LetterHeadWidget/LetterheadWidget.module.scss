@@ -1,0 +1,67 @@
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  background: var(--color-primary-50);
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  height: 40px;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding-left: 12px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include tablet-landscape {
+    align-items: flex-start;
+    border-radius: 8px 0 0 8px;
+    height: 100%;
+    justify-content: center;
+    padding-left: 0;
+    width: 50px;
+  }
+
+  &.rejected {
+    background: var(--color-error-50);
+  }
+
+  &.approved {
+    background: var(--color-success-50);
+  }
+
+  &.active {
+    background: var(--color-primary-50);
+  }
+}
+
+.background {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3), transparent);
+  background-size: cover;
+  height: 40px;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+
+  @include tablet-landscape {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
+    height: 100%;
+    width: 50px;
+  }
+}
+
+.iconHolder {
+  height: 24px;
+  width: 24px;
+  z-index: 1;
+
+  @include tablet-landscape {
+    padding-top: 24px;
+  }
+}
+
+.icon {
+  color: var(--color-white);
+}

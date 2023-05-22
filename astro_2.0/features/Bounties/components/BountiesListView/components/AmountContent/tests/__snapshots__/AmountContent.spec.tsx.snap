@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmountContent Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <span
+      class="item"
+    >
+      <div
+        class="label"
+      >
+        <div
+          class="value"
+        >
+          0
+        </div>
+      </div>
+      <div
+        class="root"
+      >
+        <div
+          class="iconWrapper iconWrapper"
+        >
+          <svg>
+            <use
+              href="/_next/undefined"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="label"
+      >
+        <div
+          class="ellipse"
+        >
+          NEAR
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+`;

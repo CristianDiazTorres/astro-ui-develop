@@ -1,0 +1,44 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  width: 100%;
+}
+
+.header {
+  h3 {
+    @include font(1em, 24px, 700);
+    font-family: var(--font-family-primary);
+    margin: 0;
+  }
+
+  p {
+    @extend %caption1;
+    margin-top: 8px;
+  }
+}
+
+.listContainer {
+  margin: 24px 0 40px;
+}
+
+.list {
+  align-items: stretch;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  width: 100%;
+
+  @include tablet-landscape {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  > .optionCard {
+    margin-bottom: 16px;
+  }
+
+  > .optionCard:not(:last-of-type) {
+    margin-right: 16px;
+  }
+}

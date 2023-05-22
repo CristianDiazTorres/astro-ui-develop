@@ -1,0 +1,49 @@
+@use 'styles/breakpoints';
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 210px;
+  justify-content: center;
+  margin-bottom: 12px;
+  min-height: 210px;
+  transition: border-color 0.2s ease-out;
+
+  width: 100%;
+
+  @include tablet-landscape {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+.root:hover {
+  border-color: var(--color-primary-50);
+  box-shadow: 3px 2px 24px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  color: var(--color-neutral-60);
+  height: 100px;
+  transition: color 0.2s ease-out;
+}
+
+.label {
+  color: var(--color-neutral-80);
+}

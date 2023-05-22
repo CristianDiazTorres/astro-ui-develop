@@ -1,0 +1,26 @@
+@import 'styles/typography';
+
+.root {
+  @extend %body2;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.selector {
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.arrow {
+  color: var(--color-neutral-85);
+
+  @include astro-mobile {
+    color: var(--color-neutral-40);
+  }
+}
+
+.flag {
+  height: 24px;
+  margin-right: 8px;
+  width: 24px;
+}

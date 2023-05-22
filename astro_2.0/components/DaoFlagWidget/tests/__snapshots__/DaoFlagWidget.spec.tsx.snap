@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dao flag widget Should render component 1`] = `
+<div>
+  <div
+    class="root"
+    href="/dao/123"
+  >
+    <div
+      class="root md"
+    >
+      <svg
+        class="defaultLogo"
+      >
+        <use
+          href="/_next/undefined"
+        />
+      </svg>
+    </div>
+    <div
+      class="root info"
+    >
+      <div
+        class="block"
+      >
+        <div
+          class="label"
+        >
+          DAO name
+        </div>
+      </div>
+      <div
+        class="block"
+      >
+        <div
+          class="valueSmall"
+        >
+          Dao Name
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

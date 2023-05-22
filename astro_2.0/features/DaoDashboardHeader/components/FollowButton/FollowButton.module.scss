@@ -1,0 +1,71 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  @include ellipse-text;
+  @include centralize;
+  flex: 1;
+  font-size: 13px;
+  height: 40px;
+  padding: 0 12px;
+  text-transform: capitalize;
+
+  @include tablet-landscape {
+    flex: unset;
+    margin-right: 12px;
+  }
+}
+
+.subscribedBtn {
+  border-color: var(--color-success-60);
+  color: var(--color-success-60);
+
+  &:hover {
+    background-color: var(--color-error-60);
+    border-color: var(--color-error-60);
+    color: var(--color-white);
+  }
+}
+
+.subscribed {
+  display: flex;
+}
+
+.subscribedHovered {
+  display: none;
+}
+
+//.root:hover {
+//  .subscribed {
+//    display: none;
+//  }
+//  .subscribedHovered {
+//    display: block;
+//  }
+//}
+
+.followIcon {
+  margin-right: 4px;
+  width: 24px;
+}
+
+.confirmRoot {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.confirmText {
+  @extend %subtitle1;
+  margin-bottom: 24px;
+  padding: 12px;
+
+  .highlighted {
+    color: var(--color-primary-50);
+  }
+}
+
+.confirmButton {
+  text-transform: capitalize;
+}

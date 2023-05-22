@@ -1,0 +1,41 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  margin-top: 12px;
+}
+
+.description {
+  margin-bottom: 44px;
+  max-width: 680px;
+}
+
+.advantageContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantage {
+  flex: 1;
+
+  &:not(:last-of-type) {
+    margin-right: 16px;
+  }
+}
+
+.startToCreate {
+  margin: 24px 0 64px;
+  width: 240px;
+}
+
+.faq {
+  margin-bottom: 26px;
+}
+
+.accordion {
+  margin-bottom: 12px;
+}
+
+.link {
+  color: var(--color-pending);
+}

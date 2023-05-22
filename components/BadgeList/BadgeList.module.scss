@@ -1,0 +1,17 @@
+.selected {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.selected .selectedWrapper {
+  margin-right: 4px;
+}
+
+.collapsedLabel {
+  visibility: hidden;
+}
+
+.collapsedLabel.visible {
+  visibility: visible;
+}

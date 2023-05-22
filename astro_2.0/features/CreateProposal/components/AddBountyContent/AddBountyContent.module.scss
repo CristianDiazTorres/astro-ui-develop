@@ -1,0 +1,156 @@
+@use 'styles/breakpoints';
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  display: flex;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+
+  .iconWrapper {
+    background-color: var(--color-neutral-30);
+    border-radius: 50%;
+    height: 24px;
+    margin-right: 8px;
+    overflow: hidden;
+    width: 24px;
+  }
+}
+
+.inputWrapper {
+  max-width: 160px;
+
+  /* stylelint-disable */
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  /* stylelint-enable */
+
+  input {
+    font-weight: 700;
+    @include placeholder {
+      color: var(--color-neutral-40);
+      transition: opacity 0.2s linear;
+    }
+  }
+}
+
+.select {
+  flex: 1;
+  max-width: fit-content;
+
+  label {
+    padding-bottom: 4px;
+  }
+
+  button {
+    border: 0;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+
+  .balance {
+    display: none;
+    margin-left: auto;
+  }
+
+  .row {
+    font-family: var(--font-family-primary);
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.select ul {
+  min-width: 260px;
+  .balance {
+    display: flex;
+  }
+}
+
+.symbol {
+  @include ellipse-text;
+  line-height: 1;
+  max-width: 120px;
+  text-align: left;
+}
+
+.icon {
+  background-color: var(--color-brand-black);
+  background-position: center;
+  background-size: contain;
+  height: 24px;
+  width: 24px;
+}
+
+.loaderWrapper {
+  align-items: center;
+  display: flex;
+  margin-top: 24px;
+  padding: 8px;
+}
+
+.divider {
+  margin-left: 12px;
+
+  @include large-desktop {
+    margin-left: 60px;
+  }
+}
+
+.inline {
+  display: flex;
+}
+
+@media screen and (max-width: #{breakpoints.$screen-md}px) {
+  .root {
+    flex-wrap: wrap;
+  }
+
+  .inline {
+    width: 100%;
+  }
+
+  .inline:last-of-type {
+    margin-top: 24px;
+  }
+}
+
+.sub {
+  @extend %caption3;
+  @include ellipse-text;
+}
+
+@media screen and (max-width: #{breakpoints.$screen-sm}px) {
+  .root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > div:nth-child(3),
+    > div:nth-child(4),
+    > div:nth-child(5),
+    > div:nth-child(6) {
+      grid-column: 1 / 3;
+      margin-left: 0;
+    }
+  }
+
+  .select ul {
+    min-width: 200px;
+    .balance {
+      display: flex;
+    }
+  }
+}

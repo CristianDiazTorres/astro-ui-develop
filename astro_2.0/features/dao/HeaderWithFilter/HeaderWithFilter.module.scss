@@ -1,0 +1,30 @@
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.headerContainer {
+  align-items: center;
+  display: flex;
+  margin-bottom: 12px;
+  margin-right: 32px;
+
+  @include tablet-landscape {
+    margin-bottom: 32px;
+  }
+}
+
+.filtersContainer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+
+  @include tablet-landscape {
+    margin-bottom: 32px;
+  }
+}

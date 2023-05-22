@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineGroups Should render component 1`] = `
+<div>
+  <div
+    class="groups"
+  >
+    <div
+      class="groupsHeader"
+    >
+      Name
+    </div>
+    <div
+      class="group"
+      role="button"
+      tabindex="0"
+    >
+      <div>
+        <svg
+          class="groupIcon"
+        >
+          <use
+            href="/_next/undefined"
+          />
+        </svg>
+      </div>
+      <div
+        class="groupName"
+      >
+        Group 1
+      </div>
+    </div>
+    <div
+      class="group"
+    >
+      <div
+        class="groupName claimName"
+      >
+        Claim 1
+      </div>
+    </div>
+  </div>
+</div>
+`;

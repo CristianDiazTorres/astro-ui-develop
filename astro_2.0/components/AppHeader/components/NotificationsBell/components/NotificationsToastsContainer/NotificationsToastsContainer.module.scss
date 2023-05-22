@@ -1,0 +1,42 @@
+.root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 60px;
+  transform: translateX(-24px);
+  width: 320px;
+  z-index: 10000001;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.notificationCardWrapper {
+  display: block;
+}
+
+.showAllButton {
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 9px 30px var(--color-black-opacity-1);
+  color: var(--color-neutral-90);
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  margin-top: 8px;
+  min-width: 320px;
+  padding: 16px;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.icon {
+  color: var(--color-neutral-90);
+  width: 24px;
+}

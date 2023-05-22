@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClaimsContent Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <span
+      class="slotsWrapper"
+    >
+      <span
+        class="slotActive"
+      >
+        1
+      </span>
+      <span
+        class="slot"
+      >
+         / 
+        1
+      </span>
+    </span>
+    <div
+      class="stub"
+    />
+  </div>
+</div>
+`;

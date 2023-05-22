@@ -1,0 +1,239 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  background: var(--color-white);
+  box-shadow: 3px 2px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  height: 66px;
+  margin: 24px -24px 0;
+  transition: box-shadow 0.4s;
+
+  @include tablet-landscape {
+    border-radius: 8px;
+    display: flex;
+    margin: 0;
+  }
+
+  &:hover {
+    box-shadow: 3px 2px 24px var(--color-black-opacity-25);
+  }
+
+  &.nextVersion {
+    flex-direction: column;
+    height: unset;
+  }
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  margin-bottom: 12px;
+  -ms-overflow-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  width: 100%;
+
+  @include tablet-landscape {
+    margin-bottom: 0;
+  }
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.paddingWithNoProposalButton {
+  padding: 12px 0 0 24px;
+}
+
+.paddingWithProposalButton {
+  padding: 12px 0 0 70px;
+}
+
+.nextPadding.nextPadding {
+  padding: 16px;
+}
+
+.general {
+  align-items: center;
+  display: flex;
+  grid-area: general;
+
+  @include tablet-landscape {
+    padding: 8px 0 8px 16px;
+  }
+
+  > div:last-of-type {
+    flex: 1 1 100%;
+  }
+}
+
+.controls {
+  @include hide-scrollbar;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 5px 0;
+
+  @media (min-width: 375px) {
+    padding: 8px 16px 0;
+  }
+
+  @include tablet-portrait {
+    padding: 8px 32px 0;
+  }
+
+  @include tablet-landscape {
+    justify-content: flex-end;
+    margin-left: auto;
+    padding: 12px 0;
+  }
+
+  > div,
+  a {
+    @include tablet-landscape {
+      margin-right: 4px;
+    }
+
+    @include desktop {
+      margin-right: 6px;
+    }
+
+    @include large-desktop {
+      margin-right: 8px;
+    }
+  }
+}
+
+.proposals {
+  position: absolute;
+  @include tablet-landscape {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.daoAction {
+  display: flex;
+}
+
+.flagWrapper {
+  flex: 0 0 47px;
+  height: 53px;
+  margin-right: 22px;
+  width: 47px;
+}
+
+.displayName {
+  @extend %title1;
+  align-items: flex-end;
+  display: flex;
+  font-size: 18px;
+  line-height: 1.1;
+  max-width: 300px;
+  white-space: nowrap;
+
+  @include astro-desktop {
+    max-width: 400px;
+  }
+}
+
+.name {
+  @include ellipse-text;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.explorerLink {
+  margin-left: 12px;
+}
+
+.daoId {
+  @extend %body2;
+  color: var(--color-neutral-60);
+  display: flex;
+  white-space: nowrap;
+}
+
+.daoId {
+  margin-right: 4px;
+}
+
+.createPopup {
+  display: none;
+
+  @include non-touch-devices {
+    display: block;
+  }
+}
+
+.createIcon {
+  display: block;
+}
+
+.createText {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: initial;
+
+  @include tablet-landscape {
+    display: none;
+  }
+}
+
+.controlIcon {
+  @include centralize;
+  border-radius: 6px;
+  position: relative;
+  width: 42px;
+
+  &:not(:first-of-type) {
+    margin-left: 24px;
+  }
+
+  > button {
+    color: var(--color-neutral-60);
+    transition: 0.2s linear;
+    width: 100%;
+  }
+
+  svg {
+    width: 16px;
+  }
+}
+
+.controlIcon.controlIcon {
+  @include tablet-landscape {
+    margin-left: 0;
+  }
+}
+
+.controlIcon:hover {
+  background-color: var(--color-neutral-30);
+  color: var(--color-brand-black);
+
+  > button {
+    color: var(--color-brand-black);
+  }
+}
+
+.controlIcon.active {
+  background-color: var(--color-neutral-30);
+
+  > button {
+    color: var(--color-brand-black);
+    cursor: default;
+  }
+}
+
+.controlIcon.noActiveLink {
+  color: var(--color-brand-black);
+
+  > button {
+    color: var(--color-brand-black);
+  }
+}

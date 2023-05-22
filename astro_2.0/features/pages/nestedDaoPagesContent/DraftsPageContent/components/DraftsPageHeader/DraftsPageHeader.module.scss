@@ -1,0 +1,62 @@
+@use 'styles/breakpoints';
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  @include tablet-landscape {
+    gap: 0;
+    margin-bottom: 2px;
+    margin-top: 56px;
+  }
+}
+
+.title {
+  @extend %heading1;
+  white-space: nowrap;
+
+  @include tablet-landscape {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 38px;
+  }
+}
+
+.search {
+  background: none;
+  border: 0;
+  padding-left: 16px;
+}
+
+.searchIcon {
+  color: var(--color-neutral-70);
+  flex: 0 0 0;
+  height: 13px;
+  width: 13px;
+}
+
+.searchInput {
+  font-size: 14px;
+  line-height: 24px;
+  &::placeholder {
+    opacity: 0;
+  }
+}
+
+.searchInput:focus {
+  &::placeholder {
+    opacity: 1;
+  }
+}
+
+.removeIcon {
+  height: 13px;
+  width: 13px;
+}
+
+.removeButton {
+  height: 13px;
+  width: 13px;
+}

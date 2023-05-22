@@ -1,0 +1,79 @@
+@import 'styles/mixins';
+
+.root {
+  display: grid;
+  grid-gap: 24px;
+}
+
+.withSeparator {
+  border-bottom: 1px solid var(--color-neutral-40);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+
+  .iconWrapper {
+    border-radius: 50%;
+    height: 24px;
+    margin-right: 8px;
+    width: 24px;
+  }
+}
+
+.inputWrapper {
+  /* stylelint-disable */
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  /* stylelint-enable */
+
+  input {
+    font-weight: 700;
+
+    @include placeholder {
+      color: var(--color-neutral-40);
+      transition: opacity 0.2s linear;
+    }
+  }
+}
+
+.select {
+  flex: 1;
+  max-width: fit-content;
+
+  button {
+    border: 0;
+    overflow: hidden;
+  }
+
+  ul {
+    min-width: 200px;
+
+    @include tablet-landscape {
+      min-width: 260px;
+    }
+  }
+}
+
+.symbol {
+  @include ellipse-text;
+  max-width: 120px;
+}
+
+.editorContent {
+  display: flex;
+  padding: 12px;
+  width: 100%;
+}

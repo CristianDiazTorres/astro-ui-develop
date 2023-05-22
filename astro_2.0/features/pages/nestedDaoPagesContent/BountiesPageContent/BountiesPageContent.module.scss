@@ -1,0 +1,108 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  display: grid;
+  grid-row-gap: 0;
+  grid-template-areas:
+    'header'
+    'content';
+  grid-template-columns: 1fr;
+  padding-top: 24px;
+
+  @include tablet-landscape {
+    grid-row-gap: 12px;
+    padding-top: 40px;
+  }
+
+  @include desktop {
+    padding-top: 56px;
+  }
+}
+
+.newProposal {
+  padding-top: 32px;
+}
+
+.header {
+  align-items: center;
+  display: grid;
+  grid-row-gap: 12px;
+  grid-template-areas:
+    'title title'
+    'viewToggle filters';
+  grid-template-columns: 1fr 1fr;
+
+  @include tablet-landscape {
+    display: flex;
+  }
+}
+
+.title {
+  font-size: 32px;
+  grid-area: title;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.newProposalButton {
+  bottom: 80px;
+  font-size: 14px;
+  left: 24px;
+  position: fixed;
+  right: 24px;
+  text-transform: capitalize;
+  width: calc(100% - 48px);
+  z-index: 30;
+
+  @include tablet-landscape {
+    bottom: unset;
+    left: unset;
+    margin-left: 24px;
+    position: relative;
+    right: unset;
+    width: auto;
+  }
+}
+
+.filters {
+  @extend %subtitle4;
+  align-items: center;
+  color: var(--color-neutral-60);
+  display: flex;
+  font-weight: 400;
+  grid-area: filters;
+  //margin-left: auto;
+  justify-content: flex-end;
+  width: 100%;
+
+  .filter {
+    align-items: center;
+    margin-right: 12px;
+  }
+
+  .filterLabel {
+    margin-right: 6px;
+  }
+}
+
+.toggle {
+  grid-area: viewToggle;
+}
+
+.filterMenu {
+  right: 0;
+  top: 100%;
+  width: 120px;
+}
+
+.desktopOnly {
+  display: none;
+  @include tablet-landscape {
+    display: flex;
+  }
+}
+
+.alignRight {
+  margin-left: auto;
+}

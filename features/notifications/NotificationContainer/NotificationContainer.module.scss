@@ -1,0 +1,25 @@
+@use 'styles/breakpoints';
+
+.body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  max-height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 10000001;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: #{breakpoints.$screen-sm}px) {
+  .body {
+    width: 90vw;
+  }
+}

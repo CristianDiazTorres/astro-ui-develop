@@ -1,0 +1,28 @@
+@import 'styles/mixins';
+
+.root {
+  padding: 0 24px 60px;
+  width: 100%;
+
+  @include tablet-landscape {
+    padding: 0 42px 60px 24px;
+  }
+
+  @include desktop {
+    margin: auto;
+    max-width: 920px;
+    padding: 0 48px 60px 94px;
+  }
+
+  @include large-desktop {
+    margin: auto;
+    max-width: 1000px;
+    padding: 0 60px 60px 94px;
+  }
+
+  @include large-x-desktop {
+    margin: auto;
+    max-width: 1125px;
+    padding: 0 94px 60px;
+  }
+}

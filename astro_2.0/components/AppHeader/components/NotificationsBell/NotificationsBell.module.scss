@@ -1,0 +1,44 @@
+@import 'styles/typography';
+
+.root {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+}
+
+.bell {
+  color: var(--color-neutral-60);
+  height: 24px;
+  pointer-events: none;
+  width: 24px;
+}
+
+.root:hover .bell {
+  color: var(--color-black);
+}
+
+.notificationsCount {
+  @extend %subtitle4;
+  align-items: center;
+  background-color: var(--color-error-60);
+  border-radius: 16px;
+  color: var(--color-white);
+  display: none;
+  font-size: 10px;
+  justify-content: center;
+  margin: 0 0 0 4px;
+  max-height: 16px;
+  min-width: 16px;
+  padding: 0 4px;
+  position: absolute;
+  right: -6px;
+  top: 4px;
+  white-space: nowrap;
+
+  &.visible {
+    display: flex;
+  }
+}

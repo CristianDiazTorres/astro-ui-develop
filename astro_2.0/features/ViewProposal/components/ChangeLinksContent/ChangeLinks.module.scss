@@ -1,0 +1,54 @@
+@use 'styles/breakpoints';
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.label {
+  @extend %caption1;
+  color: var(--color-neutral-60);
+  margin-bottom: 8px;
+}
+
+.icon {
+  color: var(--color-primary);
+  margin-right: 12px;
+  width: 24px;
+}
+
+.target {
+  margin-top: 24px;
+}
+
+.linkWrapper {
+  align-items: flex-start;
+  display: flex;
+}
+
+.link {
+  margin-left: 8px;
+}
+
+@media screen and (max-width: #{breakpoints.$screen-sm}px) {
+  .root {
+    > div {
+      > div:not(:first-of-type) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  .linkWrapper {
+    align-items: flex-start;
+    display: flex;
+  }
+}

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedFilter Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="header"
+      role="button"
+      tabindex="0"
+    >
+      <p
+        class="title"
+      >
+        Hello World!
+      </p>
+      <p
+        class="selectedTitle"
+      >
+        Label
+      </p>
+      <svg
+        class="controlIcon"
+      >
+        <use
+          href="/_next/undefined"
+        />
+      </svg>
+    </div>
+    <div
+      class="radioGroup"
+      role="radiogroup"
+    >
+      <div>
+        1
+      </div>
+      <div>
+        2
+      </div>
+    </div>
+  </div>
+</div>
+`;

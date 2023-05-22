@@ -1,0 +1,35 @@
+@use 'styles/breakpoints';
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  background-color: var(--color-white);
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+}
+
+.header {
+  border-radius: 6px;
+  font-size: unset;
+  height: unset;
+  margin-bottom: 12px;
+  padding: 0 8px 0 0;
+
+  &:hover {
+    background-color: var(--color-neutral-20);
+  }
+}
+
+.toggle {
+  margin-bottom: 0;
+  outline: none;
+
+  &.notInteractive:hover {
+    background-color: unset;
+  }
+}
+
+.content {
+  max-height: 210px;
+}

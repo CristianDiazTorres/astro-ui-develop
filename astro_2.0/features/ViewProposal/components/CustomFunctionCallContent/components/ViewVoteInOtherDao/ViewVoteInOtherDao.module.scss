@@ -1,0 +1,21 @@
+.root {
+  display: grid;
+  grid-row-gap: 22px;
+}
+
+.proposalLink {
+  color: var(--color-brand-purple);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.row {
+  align-items: flex-start;
+  display: flex;
+}
+
+.second {
+  margin-left: 24px;
+}

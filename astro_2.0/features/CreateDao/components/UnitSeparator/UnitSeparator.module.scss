@@ -1,0 +1,25 @@
+@import 'styles/mixins';
+
+.root {
+  background-image: linear-gradient(
+    to right,
+    var(--color-neutral-50) 50%,
+    transparent 50%
+  );
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 12px 3px;
+  height: 3px;
+  margin: 10px -16px;
+  width: calc(100% + 32px);
+
+  @include desktop {
+    margin: 10px -32px;
+    width: calc(100% + 64px);
+  }
+
+  @include large-desktop {
+    margin: 10px -48px;
+    width: calc(100% + 96px);
+  }
+}

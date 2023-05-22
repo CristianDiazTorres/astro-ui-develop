@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default voting policy Should render component 1`] = `
+<div>
+  <div
+    class="policyWrapper"
+  >
+    <div
+      class="policyLabel"
+    >
+      votingPolicy
+    </div>
+    <div
+      class="policy"
+    >
+      <div
+        class="bold"
+      >
+        
+        %
+      </div>
+      <div>
+        of group
+         to pass of
+      </div>
+      <div
+        class="badge small primary"
+      >
+        ALL GROUPS (
+        2
+        )
+      </div>
+    </div>
+  </div>
+</div>
+`;

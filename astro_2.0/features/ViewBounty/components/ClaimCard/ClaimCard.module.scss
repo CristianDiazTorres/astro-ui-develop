@@ -1,0 +1,162 @@
+@import 'styles/typography';
+
+.root {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-neutral-40);
+  border-radius: 8px;
+  display: grid;
+  flex-wrap: wrap;
+  grid-column-gap: 12px;
+  grid-template-areas:
+    'legend person'
+    'details details';
+  grid-template-columns: 8px 1fr;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  max-width: 320px;
+  overflow: hidden;
+  width: 100%;
+
+  @include tablet-landscape {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.legend {
+  border-radius: 50%;
+  height: 8px;
+  margin: 32px 8px;
+  min-width: 8px;
+  width: 8px;
+}
+
+.root.inProgress {
+  .legend {
+    background-color: var(--color-primary-50);
+  }
+
+  .progress .bar {
+    background-color: var(--color-primary-50);
+  }
+}
+
+.root.approved {
+  .legend {
+    background-color: var(--color-success-50);
+  }
+
+  .progress .bar {
+    background-color: var(--color-success-50);
+  }
+}
+
+.root.pending {
+  .legend {
+    background-color: var(--color-pending);
+  }
+
+  .progress .bar {
+    background-color: var(--color-pending);
+  }
+
+  .icon {
+    color: var(--color-pending);
+  }
+}
+
+.root.rejected {
+  .legend {
+    background-color: var(--color-error-70);
+  }
+
+  .progress .bar {
+    background-color: var(--color-error-70);
+  }
+}
+
+.person {
+  @include ellipse-text;
+  overflow: hidden;
+  padding: 16px 6px;
+  width: 100%;
+
+  .label {
+    @extend %caption1;
+    color: var(--color-neutral-60);
+    margin-bottom: 4px;
+  }
+
+  .value {
+    @extend %caption1;
+    @include ellipse-text;
+    color: var(--color-black);
+    max-width: 220px;
+  }
+}
+
+.status {
+  @extend %caption1;
+  align-items: center;
+  color: var(--color-brand-black);
+  display: flex;
+
+  margin-left: 48px;
+
+  .proposalLink {
+    margin-left: 8px;
+    transform: translateY(-2px);
+  }
+
+  .proposalLink .icon {
+    width: 16px;
+  }
+}
+
+.details {
+  min-width: 194px;
+  padding: 8px 12px;
+  width: 100%;
+
+  .status {
+    @extend %caption1;
+    color: var(--color-brand-black);
+  }
+
+  .icon {
+    width: 16px;
+  }
+
+  .progress {
+    background-color: var(--color-neutral-40);
+    border-radius: 80px;
+    height: 8px;
+    margin: 4px 0;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .progress .bar {
+    border-radius: 80px;
+    height: 100%;
+
+    width: 60%;
+  }
+
+  .dates {
+    align-items: center;
+    color: var(--color-brand-black);
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 18px;
+    white-space: nowrap;
+  }
+
+  .dates > span:last-child {
+    margin-left: 12px;
+    white-space: nowrap;
+  }
+}

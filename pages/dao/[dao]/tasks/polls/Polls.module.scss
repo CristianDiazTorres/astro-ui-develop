@@ -1,0 +1,55 @@
+@import 'styles/mixins';
+
+.root {
+  display: grid;
+  grid-row-gap: 24px;
+  grid-template-areas:
+    'breadcrumbs'
+    'dao'
+    'feed';
+  grid-template-columns: 1fr;
+
+  padding-top: 40px;
+
+  @include desktop {
+    padding-top: 56px;
+  }
+}
+
+.breadcrumbs {
+  grid-area: breadcrumbs;
+}
+
+.dao {
+  grid-area: dao;
+  margin: 0 0 44px;
+}
+
+.header {
+  font-size: 32px;
+  margin: 0;
+}
+
+.details {
+  margin-left: -100px;
+}
+
+.feed {
+  grid-area: feed;
+}
+
+.warningWrapper {
+  margin-top: 32px;
+}
+
+.feedHeader {
+  padding-top: 24px;
+}
+
+.createProposal {
+  margin-top: 56px;
+
+  @include tablet-landscape {
+    margin-top: 32px;
+  }
+}

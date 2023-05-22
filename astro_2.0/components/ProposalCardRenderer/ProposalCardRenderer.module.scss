@@ -1,0 +1,102 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  border-radius: 0 8px 8px 0;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'letterHead'
+    'proposal'
+    'infoPanel';
+  grid-template-columns: 1fr;
+
+  @include tablet-landscape {
+    grid-template-areas:
+      'header header'
+      'letterHead proposal'
+      'infoPanel infoPanel';
+    grid-template-columns: 50px 1fr;
+  }
+
+  &.nonActionable * {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &.nonActionable .header {
+    opacity: 0.2;
+  }
+
+  &.nonActionable .proposal::after {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    bottom: 0;
+    content: '';
+    cursor: default;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    top: -48px;
+
+    z-index: 10;
+
+    @include tablet-landscape {
+      left: -50px;
+      top: 0;
+    }
+  }
+}
+
+.header {
+  align-items: flex-end;
+  display: flex;
+  grid-area: header;
+  justify-content: space-between;
+}
+
+.flagWrapper {
+  margin-right: auto;
+}
+
+.proposal {
+  grid-area: proposal;
+  position: relative;
+}
+
+.letterHead {
+  grid-area: letterHead;
+}
+
+.infoPanel {
+  grid-area: infoPanel;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @include tablet-landscape {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
+
+.proposalIdCell {
+  align-items: center;
+  display: flex;
+  height: 36px;
+  white-space: nowrap;
+
+  .proposalIdLabel {
+    @extend %subtitle5;
+    color: var(--color-neutral-60);
+    font-weight: 400;
+  }
+
+  .proposalIdValue {
+    @extend %subtitle5;
+    align-items: center;
+    color: var(--color-neutral-60);
+    display: flex;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,45 @@
+@use 'styles/breakpoints';
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  display: flex;
+  margin-bottom: 16px;
+  min-height: 48px;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.flag {
+  padding-right: 17px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.label {
+  @extend %caption1;
+  color: var(--color-neutral-60);
+  grid-area: label;
+  padding-bottom: 6px;
+}
+
+.text {
+  @extend %title3;
+}
+
+@media screen and (max-width: #{breakpoints.$screen-sm}px) {
+  .info {
+    div {
+      @include ellipse-text;
+      max-width: 40vw;
+    }
+  }
+}

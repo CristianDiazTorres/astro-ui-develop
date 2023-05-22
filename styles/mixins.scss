@@ -1,0 +1,262 @@
+@use 'styles/breakpoints';
+
+@mixin centralize {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin ellipse-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin card-shadow {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 3px 2px 24px var(--color-black-opacity-1);
+}
+
+@mixin font($size, $height, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+/*
+  Customize input placeholder
+  Usage:
+  @include placeholder {
+    color: red;
+  }
+*/
+
+@mixin placeholder {
+  &::placeholder {
+    @content;
+  }
+}
+
+// breakpoints exclusive
+@mixin mobile-only {
+  @media (max-width: #{breakpoints.$screen-xs - 1}px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-only {
+  @media (min-width: #{breakpoints.$screen-xs}) and (max-width: #{breakpoints.$screen-sm - 1}px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-only {
+  @media (min-width: #{breakpoints.$screen-sm}) and (max-width: #{breakpoints.$screen-md - 1}px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{breakpoints.$screen-xs}) and (max-width: #{breakpoints.$screen-md - 1}px) {
+    @content;
+  }
+}
+
+@mixin astro-mobile {
+  @media (max-width: #{breakpoints.$screen-mobile}px) {
+    @content;
+  }
+}
+
+// breakpoints cascading
+
+@mixin large-x-desktop {
+  @media (min-width: #{breakpoints.$screen-lgx}px) {
+    @content;
+  }
+}
+
+@mixin max-large-x-desktop {
+  @media (max-width: #{breakpoints.$screen-lgx}px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{breakpoints.$screen-lg}px) {
+    @content;
+  }
+}
+
+@mixin large-desktop-max {
+  @media (max-width: #{breakpoints.$screen-lg}px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{breakpoints.$screen-md}px) {
+    @content;
+  }
+}
+
+@mixin desktop-max {
+  @media (max-width: #{breakpoints.$screen-md}px) {
+    @content;
+  }
+}
+
+@mixin astro-desktop {
+  @media (min-width: #{breakpoints.$screen-mobile + 1}px) {
+    @content;
+  }
+}
+
+@mixin astro-desktop-max {
+  @media (max-width: #{breakpoints.$screen-mobile + 1}px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: #{breakpoints.$screen-sm}px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-max {
+  @media (max-width: #{breakpoints.$screen-sm}px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: #{breakpoints.$screen-xs}px) {
+    @content;
+  }
+}
+
+@mixin non-touch-devices {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin button-hover-state($color: --color-black) {
+  box-shadow: 0 0 20px var($color);
+}
+
+@mixin wide-background {
+  &::before {
+    background-color: var(--app-background);
+    content: '';
+    height: 100%;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%);
+    width: calc(100% + 64px);
+    z-index: -1;
+  }
+}
+
+@mixin editable-content {
+  color: var(--color-neutral-90);
+  font-family: var(--font-family-primary);
+
+  ul,
+  pre {
+    margin: 0;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  p,
+  ul {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  pre {
+    background-color: var(--color-neutral-20);
+    font-family: monospace, monospace;
+    font-size: 12px;
+    margin: 4px 0;
+    padding: 5px 10px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@mixin hide-scrollbar {
+  // stylelint-disable
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Turn off scrollbar */
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 0;
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}
+
+@mixin custom-scrollbar-horizontal {
+  /* Turn on custom 4px wide scrollbar */
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 0;
+    height: 2px;
+  }
+
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  &::-webkit-scrollbar:hover {
+    background-color: rgba(232, 224, 255, 0.09);
+  }
+
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  &::-webkit-scrollbar-thumb:horizontal {
+    background-color: rgba(232, 224, 255, 1);
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal:active {
+    /* Some darker color when you click it */
+    background: rgba(232, 224, 255, 0.61);
+    border-radius: 0;
+  }
+}
+
+@mixin custom-scrollbar-vertical {
+  /* Turn on custom 4px wide scrollbar */
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 0;
+    width: 2px;
+  }
+
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  &::-webkit-scrollbar:hover {
+    background-color: rgba(232, 224, 255, 0.09);
+  }
+
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  &::-webkit-scrollbar-thumb:vertical {
+    background-color: rgba(232, 224, 255, 1);
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical:active {
+    /* Some darker color when you click it */
+    background: rgba(232, 224, 255, 0.61);
+    border-radius: 0;
+  }
+}

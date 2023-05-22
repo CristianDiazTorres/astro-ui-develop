@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewToggle Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <button
+      class="btn tertiary sizeSmall buttonWrapper first"
+      type="button"
+    >
+      <svg
+        class="button active"
+      >
+        <use
+          href="/_next/undefined"
+        />
+      </svg>
+    </button>
+    <button
+      class="btn tertiary sizeSmall buttonWrapper"
+      type="button"
+    >
+      <svg
+        class="button active"
+      >
+        <use
+          href="/_next/undefined"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,21 @@
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+
+  .btn {
+    color: var(--color-neutral-50);
+  }
+}
+
+.root:hover {
+  .btn {
+    color: var(--color-primary-50);
+  }
+}
+
+.popup {
+  text-align: center;
+}

@@ -1,0 +1,136 @@
+@import 'styles/mixins';
+
+.root {
+  color: var(--color-neutral-60);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: 100%;
+  line-height: 24px;
+  outline: none;
+  position: relative;
+  transition: 0.2s;
+
+  &:not(:last-of-type) {
+    margin-right: 16px;
+  }
+
+  &:hover,
+  &.active {
+    color: var(--color-neutral-80);
+  }
+}
+
+.description {
+  align-items: center;
+  display: flex;
+  padding: 0 8px;
+}
+
+.iconHolder {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 8px;
+  overflow: visible;
+  position: relative;
+
+  &::after {
+    background-color: transparent;
+    border-radius: 4px;
+    content: '';
+    display: block;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+    z-index: -1;
+  }
+
+  .icon {
+    color: var(--color-primary-50);
+    min-height: 20px;
+    min-width: 20px;
+  }
+}
+
+.root:hover {
+  .iconHolder::after {
+    background-color: var(--color-neutral-20);
+  }
+}
+
+.label {
+  max-width: 0;
+  overflow: hidden;
+  transition: 1.5s;
+  white-space: nowrap;
+}
+
+.underline {
+  background-color: transparent;
+  bottom: 16px;
+  height: 1px;
+  position: absolute;
+  width: 100%;
+}
+
+.active {
+  .label {
+    max-width: 100px;
+  }
+
+  .underline {
+    background-color: var(--color-primary);
+  }
+}
+
+.tooltip {
+  display: none;
+  white-space: nowrap;
+}
+
+.mobile {
+  &.root {
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin: 0 8px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  .description {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .iconHolder {
+    margin: 0;
+  }
+
+  &.active .iconHolder::after {
+    background-color: var(--color-neutral-20);
+  }
+
+  .label {
+    display: block;
+    margin-top: 4px;
+    max-width: 100px;
+  }
+
+  .underline {
+    bottom: 8px;
+  }
+}
+
+@include non-touch-devices {
+  .tooltip {
+    display: block;
+  }
+}

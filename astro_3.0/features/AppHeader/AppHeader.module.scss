@@ -1,0 +1,67 @@
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 16px var(--color-black-opacity-005);
+  display: flex;
+
+  height: var(--app-header-height);
+  left: 0;
+  padding: 12px 24px;
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+
+  z-index: 1100;
+}
+
+.logoWrapper {
+  min-width: 75px;
+}
+
+.main {
+  margin: 0 auto;
+  padding-bottom: 0;
+  width: 100%;
+
+  @include desktop {
+    max-width: 620px;
+    padding: 0 48px;
+  }
+
+  @include large-desktop {
+    margin: auto;
+  }
+}
+
+.search {
+  left: unset;
+  margin-left: auto;
+  max-width: 600px;
+  position: relative;
+
+  @include desktop {
+    margin-left: unset;
+  }
+}
+
+.bell {
+  margin-right: 12px;
+}
+
+.rightSection {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.mobileMenu {
+  display: block;
+
+  @include desktop {
+    display: none;
+  }
+}

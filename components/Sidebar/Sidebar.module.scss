@@ -1,0 +1,110 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.sidebar {
+  background: var(--color-brand-black);
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 255px;
+  min-height: 100vh;
+  min-width: 215px;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  @include desktop {
+    display: flex;
+  }
+
+  /* Turn on custom 4px wide scrollbar */
+  ::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 0;
+    width: 4px;
+  }
+
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(232, 224, 255, 0.09);
+  }
+
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color: rgba(232, 224, 255, 1);
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:active {
+    /* Some darker color when you click it */
+    background: rgba(232, 224, 255, 0.61);
+    border-radius: 0;
+  }
+}
+
+.logo {
+  background: var(--color-brand-black);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.scrolling {
+  $logo-bottom-part-height: 530px;
+  height: calc(100vh - #{$logo-bottom-part-height});
+  overflow-y: scroll;
+}
+
+.bottom {
+  background: var(--color-brand-black);
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.sub {
+  background: var(--color-primary-80);
+}
+
+.item {
+  background: var(--color-brand-black);
+  display: flex;
+  padding: 12px 32px;
+}
+
+.divider {
+  border-bottom: 1px solid var(--color-neutral-80);
+  height: 1px;
+  margin: 12px 32px;
+}
+
+.subheader {
+  @extend %caption3;
+  align-items: center;
+  color: var(--color-white);
+  display: flex;
+  margin: 0 32px 8px;
+
+  .logo {
+    margin-left: 4px;
+  }
+
+  &:hover {
+    color: var(--color-success);
+  }
+}
+
+.mainLogo {
+  display: inline;
+  width: fit-content;
+}
+
+.devLink {
+  cursor: pointer;
+}

@@ -1,0 +1,409 @@
+@import 'styles/typography';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.header {
+  border-left: 12px solid var(--color-neutral-40);
+  border-radius: 8px 0 0;
+  color: var(--color-neutral-60);
+  z-index: 0;
+
+  &.inProgress {
+    border-color: var(--color-primary-20);
+  }
+
+  &.completed {
+    border-color: var(--color-success-20);
+  }
+}
+
+.header,
+.row {
+  display: grid;
+  grid-column-gap: 4px;
+  grid-template-areas:
+    'title title title'
+    'proposer proposer proposer'
+    'content content details';
+  grid-template-columns: 1fr 1fr 1fr;
+
+  position: relative;
+
+  @include tablet-landscape {
+    grid-column-gap: 4px;
+    grid-template-areas: unset;
+    grid-template-columns: 2fr 1.2fr 1.4fr 96px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.title,
+.proposer,
+.details,
+.content {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.content {
+  justify-content: center;
+}
+
+.control {
+  left: -32px;
+  position: absolute;
+  top: 4px;
+}
+
+.title {
+  @extend %subtitle4;
+  background-color: var(--color-neutral-40);
+  border-radius: 0 8px 0 0;
+  color: var(--color-brand-black);
+
+  position: relative;
+  width: fit-content;
+
+  &.inProgress {
+    background-color: var(--color-primary-20);
+  }
+
+  &.completed {
+    background-color: var(--color-success-20);
+  }
+}
+
+.title.pending .controlIcon {
+  color: var(--color-neutral-60);
+}
+
+.title.inProgress .controlIcon {
+  color: var(--color-primary-50);
+}
+
+.title.completed .controlIcon {
+  color: var(--color-success-50);
+}
+
+.controlIcon {
+  width: 16px;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.row {
+  border-left: 12px solid var(--color-neutral-40);
+  border-radius: 4px;
+  box-shadow: 3px 2px 24px var(--color-black-opacity-1);
+  //margin-bottom: 12px;
+  //overflow: hidden;
+  padding: 4px;
+
+  @include tablet-landscape {
+    height: 56px;
+  }
+
+  &.firstRow {
+    border-radius: 0 4px 4px;
+  }
+
+  &.inProgress {
+    border-color: var(--color-primary-20);
+  }
+
+  &.completed {
+    border-color: var(--color-success-20);
+  }
+}
+
+.rowTitle,
+.rowProposer,
+.toggle,
+.rowDetails,
+.rowContent {
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  padding: 8px;
+
+  @include tablet-landscape {
+    padding: 16px 8px;
+  }
+}
+
+.rowTitle {
+  grid-area: title;
+
+  @include tablet-landscape {
+    grid-area: unset;
+  }
+
+  button {
+    @extend %title4;
+    font-size: 14px;
+  }
+}
+
+.toggleLink {
+  transition: color 0.2s ease-out;
+
+  &:hover {
+    color: var(--color-primary-50);
+  }
+
+  &.disabled {
+    color: var(--color-neutral-80);
+    cursor: default;
+  }
+}
+
+.rowProposer {
+  @extend %body2;
+
+  grid-area: proposer;
+
+  @include tablet-landscape {
+    grid-area: unset;
+  }
+}
+
+.rowContent {
+  grid-area: content;
+  justify-content: flex-start;
+
+  @include tablet-landscape {
+    grid-area: unset;
+    justify-content: flex-start;
+  }
+}
+
+.rowDetails {
+  @extend %subtitle4;
+  grid-area: details;
+  justify-content: flex-end;
+  transition: color 0.2s ease-out;
+
+  @include tablet-landscape {
+    grid-area: unset;
+    justify-content: flex-start;
+  }
+
+  &:hover {
+    color: var(--color-primary-50);
+  }
+}
+
+.rowRoot {
+  margin-bottom: 12px;
+  position: relative;
+
+  .rowWrapper.selected {
+    opacity: 0.3;
+  }
+}
+
+.rowWrapper {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  left: 0;
+  position: relative;
+  top: 0;
+  transition: box-shadow 0.4s, transform 0.2s ease-out;
+  z-index: 1;
+
+  &::before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.rowHideControl {
+  color: var(--color-black);
+  position: relative;
+  right: 10px;
+
+  width: 24px;
+
+  @include tablet-landscape {
+    position: absolute;
+    right: -24px;
+    top: 20px;
+  }
+
+  &:hover {
+    color: var(--color-primary-50);
+  }
+}
+
+.swipedLeft {
+  transform: translateX(-38px);
+  @include tablet-landscape {
+    transform: translateX(0);
+  }
+}
+
+.mobileActionsPanel {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.detailsButton {
+  padding: 0;
+  text-transform: capitalize;
+
+  &:hover {
+    box-shadow: 1px 1px 8px var(--color-black-opacity-1);
+  }
+}
+
+.singleLine {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+}
+
+.drilldownIcon {
+  color: var(--color-primary-50);
+  transform: translateY(2px);
+  width: 24px;
+
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+.proposalLink {
+  @extend %body2;
+
+  align-items: center;
+  background-color: var(--color-primary-20);
+  border-radius: 50%;
+  color: var(--color-brand-purple);
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  margin-right: 8px;
+  width: 24px;
+
+  .icon {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.claimsCell {
+  .slot {
+    @extend %subtitle5;
+    color: var(--color-neutral-60);
+  }
+
+  .slotActive {
+    @extend %body1;
+    font-weight: 500;
+  }
+}
+
+.claimsButton {
+  margin-left: 24px;
+  text-transform: capitalize;
+}
+
+.toggle {
+  grid-area: toggle;
+
+  @include tablet-landscape {
+    grid-area: unset;
+  }
+}
+
+.toggleClaims {
+  align-items: center;
+  border: 1px solid var(--color-neutral-60);
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  min-width: 32px;
+  padding: 2px 8px;
+  white-space: nowrap;
+
+  &.active {
+    border-color: var(--color-primary-50);
+  }
+
+  .icon {
+    margin-right: 8px;
+    width: 14px;
+  }
+
+  .slotsWrapper {
+    display: inline-block;
+    min-width: 28px;
+  }
+
+  .slot {
+    @extend %subtitle5;
+    color: var(--color-neutral-60);
+  }
+
+  .slotActive {
+    @extend %body1;
+    font-weight: 500;
+  }
+}
+
+.claimsContainer {
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 3px 2px 24px var(--color-black-opacity-1);
+  margin: 4px 0 12px 24px;
+  padding: 0;
+  position: relative;
+
+  @include tablet-landscape {
+    padding: 8px 0;
+  }
+}
+
+.claimsContainer::before {
+  background-color: transparent;
+  border-left: 1px solid var(--color-neutral-40);
+  content: '';
+  height: calc(100% - 24px);
+  left: -20px;
+  position: absolute;
+  top: -12px;
+  width: 20px;
+
+  @include tablet-landscape {
+    height: calc(100% - 40px);
+  }
+}

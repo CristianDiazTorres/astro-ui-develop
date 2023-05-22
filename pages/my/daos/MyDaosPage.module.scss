@@ -1,0 +1,19 @@
+@import 'styles/daosList';
+
+.noResults {
+  margin-top: 16px;
+
+  .createDaoLink {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.daosList {
+  @include daos-list;
+  margin-top: 16px;
+
+  &.singleDao {
+    place-items: start;
+  }
+}

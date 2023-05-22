@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineHeader Should render component 1`] = `
+<div>
+  <div
+    class="topColumnLabel"
+  >
+    Formatted date
+  </div>
+  <div
+    class="subColumns"
+  >
+    <div
+      class="column subColumn lastHeaderColumn"
+    >
+      Formatted column label
+    </div>
+  </div>
+</div>
+`;

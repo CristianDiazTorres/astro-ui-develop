@@ -1,0 +1,10 @@
+@import 'styles/mixins';
+
+.popup {
+  display: none;
+  z-index: 100;
+
+  @include non-touch-devices {
+    display: block;
+  }
+}

@@ -1,0 +1,40 @@
+.root {
+  align-items: center;
+  background-color: var(--color-neutral-30);
+  border-radius: 20px;
+  color: var(--color-neutral-70);
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  height: 38px;
+  justify-content: space-between;
+  max-width: 250px;
+  padding: 0 4px 0 16px;
+  white-space: nowrap;
+}
+
+.account {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconHolder {
+  height: auto !important;
+  margin-left: 6px;
+  width: auto !important;
+}
+
+.icon {
+  background-color: var(--color-white);
+  border-radius: 15px;
+  box-sizing: content-box;
+  color: var(--color-neutral-70);
+  height: 20px !important;
+  padding: 5px;
+  width: 20px !important;
+}
+
+.root:hover .icon {
+  color: var(--color-neutral-50);
+}

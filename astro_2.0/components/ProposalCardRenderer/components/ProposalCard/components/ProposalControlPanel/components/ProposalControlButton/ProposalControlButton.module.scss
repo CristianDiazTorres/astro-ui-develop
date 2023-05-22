@@ -1,0 +1,44 @@
+@import 'styles/mixins';
+
+.item {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 64px;
+
+  @include tablet-landscape {
+    min-width: 80px;
+  }
+}
+
+.value {
+  margin-left: 8px;
+}
+
+.icon {
+  border-radius: 100%;
+  height: unset;
+  transition: box-shadow 0.4s;
+  width: unset;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &.voted {
+    cursor: default;
+  }
+
+  &.yesAvailable:hover {
+    box-shadow: 3px 2px 16px var(--color-approved-opacity-35);
+  }
+
+  &.noAvailable:hover {
+    box-shadow: 3px 2px 16px var(--color-rejected-opacity-35);
+  }
+
+  &.dismissAvailable:hover {
+    box-shadow: 3px 2px 16px var(--color-removed-opacity-25);
+  }
+}

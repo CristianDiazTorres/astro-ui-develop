@@ -1,0 +1,105 @@
+@import 'styles/typography';
+/* stylelint-disable selector-class-pattern */
+
+$gap: 12px;
+$border-radius: 3px;
+
+.editable {
+  border: 1px solid var(--color-neutral-40);
+  border-radius: $border-radius;
+}
+
+.editable :global(.ql-editor.ql-blank) {
+  color: var(--color-neutral-70);
+  &::before {
+    font-size: 14px;
+    font-style: normal;
+    left: $gap;
+  }
+}
+
+.editable :global(.ql-container) {
+  @extend %body2;
+  font-family: var(--font-family-primary);
+}
+
+.editable :global(.ql-editor) {
+  @include editable-content;
+  background-color: var(--color-white);
+  caret-color: var(--color-primary-40);
+  min-height: 160px;
+  padding: $gap;
+}
+
+.editable :global(.ql-editor .ql-syntax) {
+  background-color: var(--color-neutral-20) !important;
+  color: var(--color-neutral-80) !important;
+}
+
+.editable :global(.ql-container.ql-snow) {
+  border: 0;
+}
+
+.toolbar {
+  background: var(--color-neutral-20);
+  border: 0 !important;
+  border-radius: $border-radius;
+}
+
+.button {
+  margin-right: $gap;
+}
+
+.textField {
+  border: 0;
+}
+
+.bottom {
+  align-items: center;
+  background: var(--color-white);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: flex;
+  gap: 12px;
+  height: 40px + $gap * 2;
+  justify-content: flex-end;
+  padding: 0 12px;
+  position: relative;
+  width: 100%;
+}
+
+.error :global(.ql-editor.ql-blank) {
+  &::before {
+    color: var(--color-error);
+    line-height: 24px;
+  }
+}
+
+.titleEdit {
+  background: var(--color-white);
+  padding: 22px 12px 12px;
+  width: 100%;
+}
+
+.titleError {
+  .titleInput::placeholder {
+    color: var(--color-error);
+  }
+}
+
+.titleInput {
+  border: 0;
+  color: var(--color-neutral-90);
+  font-family: var(--font-family-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: var(--color-neutral-60);
+  }
+}

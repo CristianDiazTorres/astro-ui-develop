@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transaction details widget Should render component 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="root"
+    >
+      <div
+        class="mainContent"
+      >
+        <div
+          class="transactionDetails"
+        >
+          <div
+            class="root detailsItem tgasInput"
+          >
+            <div
+              class="label inputLabel tgasInput"
+            >
+              <span>
+                TGas
+              </span>
+            </div>
+            <div
+              class="row"
+            >
+              <label
+                class="input sizeBlock borderless inputWrapper detailsInput"
+                for="1"
+              >
+                <div
+                  class="inputHolder"
+                >
+                  <input
+                    class=""
+                    data-testid="gas-input"
+                    id="1"
+                    max="300"
+                    min="10"
+                    placeholder="150"
+                    step="1"
+                    style="text-align: left; width: 6ch;"
+                    type="number"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+          </div>
+          <div
+            class="root detailsItem"
+          >
+            <div
+              class="label inputLabel"
+            >
+              <span>
+                components.transactionDetailsWidget.bond
+              </span>
+            </div>
+            <div
+              class="row"
+            >
+              <label
+                class="input sizeContent borderless inputWrapper detailsInput readOnly"
+                for="2"
+              >
+                <div
+                  class="inputHolder"
+                >
+                  <input
+                    class=""
+                    id="2"
+                    max="0.25"
+                    min="0.01"
+                    placeholder="0.25"
+                    readonly=""
+                    step="0.01"
+                    style="text-align: left; width: 5ch;"
+                    type="number"
+                    value="0"
+                  />
+                </div>
+              </label>
+              <div
+                class="tokenLabel"
+              >
+                NEAR
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn black sizeMedium createButton"
+          type="submit"
+        >
+          Purpose
+        </button>
+      </div>
+    </div>
+    <div
+      class="__react_component_tooltip t00000000-0000-4000-8000-000000000000 place-top type-dark"
+      data-id="tooltip"
+      id="t00000000-0000-4000-8000-000000000000"
+    >
+      <style
+        aria-hidden="true"
+      >
+        
+  	.t00000000-0000-4000-8000-000000000000 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t00000000-0000-4000-8000-000000000000.place-top {
+        margin-top: -10px;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t00000000-0000-4000-8000-000000000000.place-bottom {
+        margin-top: 10px;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t00000000-0000-4000-8000-000000000000.place-left {
+        margin-left: -10px;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t00000000-0000-4000-8000-000000000000.place-right {
+        margin-left: 10px;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t00000000-0000-4000-8000-000000000000.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  
+      </style>
+    </div>
+  </form>
+</div>
+`;

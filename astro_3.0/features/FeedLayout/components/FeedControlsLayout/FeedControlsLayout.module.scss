@@ -1,0 +1,25 @@
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+
+  padding: 0 24px;
+  width: 100%;
+
+  @include desktop {
+    padding: 0 64px 0 96px;
+  }
+
+  @include large-desktop {
+    margin: auto;
+  }
+
+  @include large-x-desktop {
+    margin: auto;
+    max-width: unset;
+    padding: 0 64px 0 128px;
+  }
+}

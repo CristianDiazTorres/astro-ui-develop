@@ -1,0 +1,21 @@
+.replyButton {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  line-height: 24px;
+  min-width: auto;
+}
+
+.replyButton:hover {
+  color: var(--color-primary-50);
+  .icon {
+    color: var(--color-primary-50);
+  }
+}
+
+.icon {
+  color: var(--color-neutral-60);
+  height: 24px;
+  margin-left: 4px;
+  width: 24px;
+}

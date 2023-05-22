@@ -1,0 +1,222 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  padding: 24px 0;
+  width: 100%;
+
+  @include tablet-portrait {
+    padding: 24px;
+  }
+
+  @include desktop {
+    height: 100%;
+  }
+}
+
+.header {
+  h3 {
+    @include font(1em, 24px, 700);
+    font-family: var(--font-family-primary);
+    margin: 0 0 24px;
+    padding: 0 24px;
+
+    @include tablet-portrait {
+      margin: 0 0 36px;
+      padding: 0;
+    }
+  }
+}
+
+.titles {
+  @include font(0.875em, 24px, 700);
+  display: none;
+
+  @include tablet-portrait {
+    display: flex;
+    text-align: center;
+  }
+}
+
+.titleOut {
+  margin-bottom: 16px;
+  width: 50%;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet-portrait {
+    align-items: flex-start;
+    border: 1px solid var(--color-neutral-40);
+    border-radius: 4px;
+    flex-direction: row;
+    padding: 32px 24px;
+  }
+}
+
+.column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include tablet-portrait {
+    width: 70%;
+
+    &:last-of-type {
+      width: 30%;
+    }
+  }
+
+  @include large-desktop {
+    width: 50%;
+
+    &:last-of-type {
+      width: 50%;
+    }
+  }
+
+  &:first-of-type {
+    @include tablet-portrait {
+      margin-right: 24px;
+    }
+  }
+
+  &:first-of-type div {
+    margin-right: 0;
+  }
+
+  &:last-of-type {
+    padding: 0 24px;
+
+    @include tablet-portrait {
+      padding: 0;
+    }
+  }
+}
+
+.titleIn {
+  @include font(0.875em, 24px, 700);
+  margin-bottom: 16px;
+
+  @include tablet-portrait {
+    display: none;
+  }
+}
+
+.flags {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+
+  @include tablet-portrait {
+    height: 418px;
+  }
+}
+
+.flag {
+  @include centralize;
+  height: 272px;
+  position: relative;
+  width: 241px;
+
+  &.sm {
+    height: 46px;
+    width: 42px;
+
+    @include tablet-portrait {
+      margin-top: 30px;
+    }
+  }
+}
+
+.background {
+  background-color: var(--color-white);
+  clip-path: url('#flag');
+  inset: 0;
+  position: absolute;
+  transform: scale(1.04, 1.045);
+
+  &.sm {
+    clip-path: url('#small-flag');
+    transform: scale(1.09, 1.1);
+  }
+}
+
+.cover {
+  background-position: center;
+  background-size: cover;
+  clip-path: url('#flag');
+  height: 100%;
+  width: 100%;
+
+  &.sm {
+    clip-path: url('#small-flag');
+  }
+}
+
+.logo {
+  background-position: center;
+  background-size: cover;
+  height: 68px;
+  left: 136px;
+  position: absolute;
+  top: 66px;
+  width: 68px;
+}
+
+.dummyCard {
+  @include card-shadow;
+  background-image: url('/dummy-card.png');
+  background-size: cover;
+  border-radius: 8px 0 0 8px;
+  height: 418px;
+  position: relative;
+  width: 100%;
+}
+
+.letterhead {
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px 0 0 8px;
+  bottom: 0;
+  left: 0;
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  width: 46px;
+}
+
+.dashboardPreview {
+  margin-bottom: 90px;
+}
+
+.letterHeadSection {
+  background: var(--color-primary-50);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: letterHeadSection;
+  height: 134px;
+  position: relative;
+  width: 100%;
+
+  @include tablet-landscape {
+    border-radius: 8px;
+    margin: 0;
+  }
+
+  .logoDashboard {
+    left: 0;
+    transform: translate(36px, 60px);
+  }
+
+  .joinDao {
+    position: relative;
+    right: 0;
+  }
+}

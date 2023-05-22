@@ -1,0 +1,24 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.title {
+  @extend %heading3;
+  line-height: 48px;
+  margin: 0 0 8px;
+}
+
+.list {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 2px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+}
+
+.item {
+  margin: 8px 16px 8px 0;
+}

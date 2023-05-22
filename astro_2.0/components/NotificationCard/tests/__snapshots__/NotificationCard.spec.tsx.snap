@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification Card Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="content new"
+      data-testid="noty-content"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="flagContainer"
+      >
+        <div
+          class="flagWrapper"
+        >
+          <div
+            class="flag"
+          >
+            <div
+              class="root logo md"
+            >
+              <svg
+                class="defaultLogo"
+              >
+                <use
+                  href="/_next/undefined"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="type"
+          />
+        </div>
+      </div>
+      <div
+        class="text"
+      />
+      <div
+        class="description"
+      >
+        <div
+          class="descriptionHeader"
+        >
+          description
+          :
+        </div>
+        <span>
+          some description
+        </span>
+      </div>
+      <div
+        class="time"
+      >
+        12:00 am
+      </div>
+      <div
+        class="control"
+      >
+        <div
+          class=""
+        >
+          <div
+            class="markRead"
+          >
+            <button
+              class="btn transparent sizeBlock markReadButton"
+              data-testid="mark-read"
+              type="button"
+            >
+              <svg
+                class="markReadIcon"
+                width="24"
+              >
+                <use
+                  href="/_next/undefined"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mobileActionsPanel"
+    >
+      <div
+        class=""
+      >
+        <div
+          class="markRead"
+        >
+          <button
+            class="btn transparent sizeBlock markReadButton"
+            data-testid="mark-read"
+            type="button"
+          >
+            <svg
+              class="markReadIcon"
+              width="24"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

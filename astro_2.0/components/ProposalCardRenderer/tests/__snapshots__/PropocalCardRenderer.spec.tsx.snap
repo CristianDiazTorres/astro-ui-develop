@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`proposal card renderer Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="flagWrapper"
+      />
+    </div>
+    <div
+      class="proposal"
+    >
+      <div>
+        Proposal Node
+      </div>
+    </div>
+  </div>
+</div>
+`;

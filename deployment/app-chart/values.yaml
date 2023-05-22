@@ -1,0 +1,97 @@
+# Default values for astro-ui.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: 570288326086.dkr.ecr.us-east-1.amazonaws.com
+  tag: latest
+  name: astro-ui
+  pullPolicy: Always
+
+imagePullSecrets: [ ]
+nameOverride: ""
+fullnameOverride: ""
+
+container:
+  # Specifies the internal container port
+  internalPort: 3000
+  # Specifies the endpoint for liveness checks
+  livenessProbe:
+    failureThreshold: 2
+    initialDelaySeconds: 10
+    periodSeconds: 60
+    successThreshold: 1
+    timeoutSeconds: 5
+    port: 3000
+    path: /api/health
+  readinessProbe:
+    failureThreshold: 2
+    initialDelaySeconds: 20
+    periodSeconds: 60
+    successThreshold: 1
+    timeoutSeconds: 5
+    port: 3000
+    path: /api/health
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ui
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+ingress:
+  host: "astro-ui-host"
+
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  limits:
+    cpu: 300m
+    memory: 400Mi
+  requests:
+    cpu: 200m
+    memory: 300Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+version:
+  commit: latest
+  branch: develop
+
+environment:
+  NEAR_ENV: "testnet"
+  NEAR_CONTRACT_NAME: "sputnikv2.testnet"
+  ROKETO_CONTRACT_NAME: "streaming-r-v2.dcversus.testnet"
+  ROKETO_MULTICALL_NAME: "multicall.lebedev.testnet"
+  API_URL: "http://a6f2431dfded249d18fc7a20377342db-2021398035.eu-central-1.elb.amazonaws.com"
+  AWS_BUCKET: "sputnik-dao"
+  AWS_REGION: "eu-central-1"
+  STATS_API_URL: "https://testnet.api.daostats.io"
+  RELEASE_NOTES: "https://astrodao.canny.io/changelog"

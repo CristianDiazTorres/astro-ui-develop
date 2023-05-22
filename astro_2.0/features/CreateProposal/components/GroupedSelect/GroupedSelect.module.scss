@@ -1,0 +1,150 @@
+@use 'styles/breakpoints';
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.label {
+  @extend %caption1;
+  color: var(--color-neutral-60);
+  margin-bottom: 4px;
+}
+
+.valueSmall {
+  @extend %title3;
+  color: var(--color-neutral-90);
+}
+
+.selectedLabel {
+  align-items: center;
+  appearance: none;
+  display: flex;
+  justify-content: flex-start;
+  user-select: none;
+
+  > input,
+  .input {
+    border: 0;
+    color: var(--color-neutral-90);
+    cursor: pointer;
+    font-family: var(--font-family-primary);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 28px;
+    outline: var(--color-neutral-20);
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    user-select: none;
+    width: 100%;
+  }
+}
+
+.measureNode {
+  font-size: 22px;
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -30px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.menu {
+  background: #fff;
+  box-shadow: 0 8.89583px 30px rgba(0, 0, 0, 0.14);
+  list-style: none;
+  max-height: 420px;
+  min-width: 210px;
+  overflow-y: auto;
+  padding: 16px 0;
+  position: absolute;
+  right: 0;
+  top: 80%;
+  z-index: 1;
+
+  @include tablet-landscape {
+    min-width: 360px;
+    right: unset;
+  }
+}
+
+.sectionTitle {
+  @extend %caption1;
+  border-bottom: 1px solid var(--color-neutral-30);
+  color: var(--color-neutral-50);
+  margin: 0 32px 8px;
+  padding-bottom: 4px;
+}
+
+.controlItem {
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  margin: 4px 4px 16px;
+  padding: 6px 28px;
+}
+
+.item {
+  @extend %body2;
+  @include ellipse-text;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  margin: 4px;
+  padding: 6px 28px;
+
+  white-space: normal;
+
+  &:hover {
+    background: var(--color-neutral-10);
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.active {
+  background: var(--color-primary-20);
+
+  &:hover {
+    background: var(--color-neutral-30);
+  }
+}
+
+.icon {
+  appearance: none;
+}
+
+.searchFilter {
+  max-width: unset;
+}
+
+@media screen and (max-width: #{breakpoints.$screen-sm}px) {
+  .root {
+    width: 100%;
+  }
+
+  .selectedLabel {
+    > input,
+    .input {
+      font-size: 14px;
+    }
+  }
+
+  .menu {
+    max-width: 300px;
+  }
+}

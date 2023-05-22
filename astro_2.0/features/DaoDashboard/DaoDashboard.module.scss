@@ -1,0 +1,65 @@
+@use 'styles/breakpoints';
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-areas:
+    'description'
+    'chart'
+    'funds'
+    'bounties'
+    'nfts'
+    'proposals';
+  grid-template-columns: 1fr;
+
+  @include astro-desktop {
+    grid-template-areas:
+      'description description'
+      'chart funds'
+      'chart bounties'
+      'chart nfts'
+      'chart proposals';
+    grid-template-columns: 1fr 275px;
+  }
+}
+
+.descriptionSection {
+  @extend %body2;
+  grid-area: description;
+  margin: 0;
+}
+
+.chart {
+  background-color: var(--color-white);
+  grid-area: chart;
+  margin: 0 -24px;
+  overflow: hidden;
+
+  @include tablet-landscape {
+    margin: 0;
+  }
+
+  @include tablet-portrait {
+    border-radius: 8px;
+    box-shadow: 3px 2px 24px var(--color-black-opacity-1);
+    margin: 0;
+  }
+}
+
+.funds {
+  grid-area: funds;
+}
+
+.bounties {
+  grid-area: bounties;
+}
+
+.nfts {
+  grid-area: nfts;
+}
+
+.proposals {
+  grid-area: proposals;
+}

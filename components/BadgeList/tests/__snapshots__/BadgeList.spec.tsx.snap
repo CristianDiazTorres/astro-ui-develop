@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge List Should render component 1`] = `
+<div>
+  <div
+    class="selected"
+  >
+    <div
+      class="selectedWrapper"
+    >
+      <div>
+        Hello
+      </div>
+    </div>
+    <div
+      class="collapsedLabel selectedWrapper visible"
+    >
+      <div
+        class="badge small turqoise"
+      >
+        +
+        1
+      </div>
+    </div>
+  </div>
+</div>
+`;

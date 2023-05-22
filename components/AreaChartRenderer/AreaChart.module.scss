@@ -1,0 +1,49 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  background-color: var(--color-white);
+  flex: 1;
+  margin: 0 -24px;
+  padding: 24px 24px 24px 12px;
+
+  @include tablet-portrait {
+    border-radius: 8px;
+    box-shadow: 3px 2px 24px var(--color-black-opacity-1);
+    margin: 0;
+  }
+
+  @include tablet-landscape {
+    padding: 32px 32px 32px 20px;
+  }
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 24px 36px;
+}
+
+.range.range {
+  justify-content: flex-end;
+}
+
+.title {
+  @extend %title3;
+  white-space: nowrap;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rangePlaceholder {
+  color: var(--color-brand-black);
+  font-family: 'Manrope', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}

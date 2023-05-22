@@ -1,0 +1,119 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  justify-content: space-between;
+  margin: 0;
+  position: relative;
+  width: 100%;
+
+  @include tablet-landscape {
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    margin: 0 48px 24px;
+  }
+}
+
+.link {
+  flex: 1;
+  height: 4px;
+  position: relative;
+  width: 14px;
+
+  @include tablet-landscape {
+    height: 4px;
+    width: unset;
+  }
+
+  &.pending {
+    border-right: 4px dashed var(--color-neutral-50);
+    height: 4px;
+
+    @include tablet-landscape {
+      background-image: linear-gradient(
+        to right,
+        var(--color-neutral-60) 50%,
+        rgba(255, 255, 255, 0) 0%
+      );
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: 16px 1px;
+      border-right: 0;
+    }
+  }
+
+  &.completed {
+    border-right: 4px solid var(--color-success-50);
+    height: 4px;
+
+    @include tablet-landscape {
+      border-bottom: 5px solid var(--color-success-50);
+      border-right: 0;
+    }
+  }
+}
+
+.link.progress {
+  .completedProgress {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    @include tablet-landscape {
+      border-bottom: 5px solid var(--color-success-50);
+      border-right: 0;
+      display: block;
+    }
+  }
+}
+
+.link.progress .completedProgress::after {
+  background-color: var(--color-success-50);
+  border-radius: 50%;
+  content: '';
+  height: 11px;
+  position: absolute;
+  right: -11px;
+  top: -3px;
+  width: 11px;
+}
+
+.node {
+  @include centralize;
+  border-radius: 50%;
+  height: 24px;
+  position: relative;
+  width: 24px;
+
+  &.pending {
+    border: 1px solid var(--color-black);
+  }
+
+  &.completed {
+    background-color: var(--color-success-50);
+  }
+}
+
+.nodeLabel {
+  @extend %body2;
+  display: flex;
+  justify-content: center;
+  left: 32px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+
+  @include tablet-landscape {
+    left: unset;
+    top: 24px;
+  }
+}
+
+.icon {
+  width: 16px;
+}

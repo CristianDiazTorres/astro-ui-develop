@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnclaimCompleteContent Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <span
+      class="item controlButton"
+    >
+      <button
+        class="iconButton large icon yesAvailable"
+        type="submit"
+      >
+        <svg
+          class=""
+        >
+          <use
+            href="/_next/undefined"
+          />
+        </svg>
+      </button>
+      <span
+        class="value title3"
+      />
+    </span>
+    <span
+      class="item controlButton"
+    >
+      <button
+        class="iconButton large icon noAvailable"
+        type="submit"
+      >
+        <svg
+          class=""
+        >
+          <use
+            href="/_next/undefined"
+          />
+        </svg>
+      </button>
+      <span
+        class="value title3"
+      />
+    </span>
+  </div>
+</div>
+`;

@@ -1,0 +1,55 @@
+@use 'styles/breakpoints';
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  //gap: 24px;
+  white-space: nowrap;
+
+  .iconWrapper {
+    background-color: var(--color-neutral-30);
+    border-radius: 50%;
+    height: 24px;
+    margin-right: 8px;
+    width: 24px;
+  }
+}
+
+.inline {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 200px 1fr;
+  margin-bottom: 24px;
+}
+
+.title {
+  @extend %title3;
+  margin-bottom: 24px;
+}
+
+.wide {
+  flex: 1;
+}
+
+.narrow {
+  max-width: 60px;
+}
+
+.symbol {
+  @include ellipse-text;
+  max-width: 60px;
+}
+
+@media screen and (max-width: #{breakpoints.$screen-sm}px) {
+  .inline {
+    grid-template-columns: 1fr;
+  }
+}

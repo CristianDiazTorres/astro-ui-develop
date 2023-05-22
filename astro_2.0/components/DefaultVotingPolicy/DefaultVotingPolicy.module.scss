@@ -1,0 +1,39 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.title {
+  @extend %title5;
+}
+
+.policyWrapper {
+  background-color: var(--color-brand-black);
+  border-radius: 8px;
+  margin-top: 56px;
+  padding: 14px;
+
+  @include tablet-portrait {
+    padding: 14px 60px;
+  }
+
+  .policyLabel {
+    @extend %title5;
+    color: var(--color-white);
+    margin: 0 0 12px;
+  }
+
+  .policy {
+    align-items: center;
+    color: var(--color-white);
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .policy > div {
+    margin-right: 6px;
+  }
+
+  .bold {
+    flex-shrink: 0;
+    font-weight: bold;
+  }
+}

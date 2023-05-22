@@ -1,0 +1,71 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  border-radius: 4px;
+  cursor: pointer;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 12px;
+  padding: 8px;
+
+  white-space: nowrap;
+
+  @include tablet-landscape {
+    grid-template-columns: 2fr 1.2fr 80px 1fr;
+  }
+}
+
+.root:hover {
+  background-color: var(--color-neutral-20);
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  .title {
+    @extend %title4;
+    @include ellipse-text;
+  }
+
+  .desc {
+    @extend %caption2;
+    white-space: normal;
+  }
+}
+
+.creator,
+.duplicated {
+  @extend %subtitle4;
+  @include ellipse-text;
+  align-items: center;
+  display: flex;
+  white-space: normal;
+}
+
+.control {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  .icon {
+    margin-right: 4px;
+    width: 20px;
+  }
+
+  .controlBtn {
+    @include centralize;
+  }
+}
+
+.hideMobile {
+  display: none;
+
+  @include tablet-landscape {
+    display: flex;
+  }
+}

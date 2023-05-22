@@ -1,0 +1,134 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  @extend %body2;
+  background-color: var(--color-neutral-20);
+  border-radius: 0 4px 4px;
+  color: var(--color-black);
+  height: fit-content;
+  margin-bottom: 42px;
+  //margin-top: auto;
+  max-width: 100%;
+  padding: 12px;
+  position: relative;
+  width: fit-content;
+
+  @include tablet-landscape {
+    max-width: 60%;
+  }
+
+  &:first-of-type {
+    margin-top: auto;
+  }
+
+  p {
+    margin: 2px 0;
+  }
+
+  .link {
+    color: var(--color-primary-50);
+  }
+
+  .time {
+    @extend %caption1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &.myComment {
+    background-color: var(--color-neutral-30);
+    border-radius: 4px 0 4px 4px;
+    margin-left: auto;
+  }
+}
+
+.tickMark {
+  position: absolute;
+  top: 0;
+}
+
+.tickRight {
+  right: -8px;
+}
+
+.tickLeft {
+  left: -10px;
+}
+
+.commentAuthor {
+  @extend %title3;
+  color: var(--color-primary-50);
+}
+
+.commentControls {
+  align-items: center;
+  display: flex;
+  left: 0;
+  min-width: 100%;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+}
+
+.root.myComment {
+  .commentControls {
+    left: unset;
+    right: 0;
+  }
+}
+
+.commentControlButtonWrapper {
+  @include centralize;
+  background-color: var(--color-primary-20);
+  border-radius: 50%;
+  height: 24px;
+  transform: translateY(4px);
+  width: 24px;
+
+  &:not(:first-of-type) {
+    margin-left: 8px;
+  }
+}
+
+.commentControlButton + div {
+  white-space: nowrap;
+}
+
+.commentControlIcon {
+  height: 16px;
+  transform: translateY(-1px);
+  width: 16px;
+}
+
+.root:hover {
+  .commentControls {
+    visibility: visible;
+  }
+}
+
+.commentControls.reported {
+  opacity: 0.7;
+  pointer-events: none;
+  visibility: visible;
+}
+
+.reportedInfo {
+  @extend %body2;
+  margin-left: 4px;
+  transform: translateY(4px);
+  white-space: nowrap;
+}
+
+.inlineImage {
+  display: block;
+  margin: 8px 0;
+  max-height: 140px;
+  max-width: 200px;
+  object-fit: contain;
+
+  @include tablet-landscape {
+    max-height: 200px;
+    max-width: 300px;
+  }
+}

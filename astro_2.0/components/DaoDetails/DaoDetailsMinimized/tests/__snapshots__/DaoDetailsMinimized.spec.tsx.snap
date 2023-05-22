@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dao details minimized Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="wrapper"
+    >
+      <a
+        href="/dao/default-flag-test.sputnikv2.testnet"
+      >
+        <section
+          class="nextPadding general"
+        >
+          <div
+            class="flagWrapper"
+          >
+            <div
+              class="root logo md"
+            >
+              <svg
+                class="defaultLogo"
+              >
+                <use
+                  href="/_next/undefined"
+                />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div
+              class="displayName"
+            >
+              <div
+                class="name"
+              >
+                Default Flag Test
+              </div>
+              <div
+                class="explorerLink"
+              >
+                <div
+                  class="root"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="iconWrapper"
+                  >
+                    <svg
+                      class="icon"
+                    >
+                      <use
+                        href="/_next/undefined"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="daoId"
+            >
+              <div
+                class="root copyAddress"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="daoId"
+                >
+                  default-flag-test.sputnikv2.testnet
+                </div>
+                <button
+                  class="iconButton small btn"
+                  type="button"
+                >
+                  <svg>
+                    <use
+                      href="/_next/undefined"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </a>
+      <section
+        class="controls"
+      >
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/drafts"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.drafts
+          </button>
+        </a>
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/proposals"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.proposals
+          </button>
+        </a>
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/treasury/tokens"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.funds
+          </button>
+        </a>
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/groups/all"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.members
+          </button>
+        </a>
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/governance/settings"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.settings
+          </button>
+        </a>
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/treasury/nfts"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.nfts
+          </button>
+        </a>
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/tasks/bounties/list"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.bounties
+          </button>
+        </a>
+        <a
+          class="controlIcon noActiveLink"
+          href="/dao/default-flag-test.sputnikv2.testnet/tasks/polls"
+          style="display: inline-block;"
+        >
+          <button
+            class="iconTextButton"
+            type="button"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+            daoDetailsMinimized.polls
+          </button>
+        </a>
+      </section>
+    </div>
+  </div>
+</div>
+`;

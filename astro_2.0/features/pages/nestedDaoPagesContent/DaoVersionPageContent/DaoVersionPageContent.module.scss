@@ -1,0 +1,36 @@
+@use 'styles/breakpoints';
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleRow {
+  align-items: center;
+  display: flex;
+  margin: 32px 0;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.versionCheck {
+  grid-area: version;
+  width: 100%;
+}
+
+.warningWrapper {
+  margin-bottom: 32px;
+}
+
+.title {
+  @extend %title3;
+  margin-bottom: 4px;
+}
+
+.text {
+  @extend %caption1;
+}

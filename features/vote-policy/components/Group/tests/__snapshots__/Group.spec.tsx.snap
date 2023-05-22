@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    My Group
+  </div>
+</div>
+`;

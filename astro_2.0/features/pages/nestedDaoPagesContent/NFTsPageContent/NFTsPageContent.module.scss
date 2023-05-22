@@ -1,0 +1,95 @@
+@import 'styles/mixins';
+
+.root {
+  display: grid;
+  grid-row-gap: 24px;
+  grid-template-areas:
+    'breadcrumb'
+    'dao'
+    'header'
+    'content';
+  grid-template-columns: 1fr;
+  padding-top: 56px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+  margin-top: 24px;
+
+  @include tablet-portrait {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.selectors {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include tablet-portrait {
+    flex-direction: row;
+  }
+}
+
+.collections,
+.contracts {
+  width: 100%;
+
+  @include tablet-portrait {
+    width: 232px;
+  }
+}
+
+.collections {
+  margin-top: 12px;
+
+  @include tablet-portrait {
+    margin: 0 24px 0 0;
+  }
+}
+
+.breadcrumbs {
+  grid-area: breadcrumb;
+}
+
+.dao {
+  grid-area: dao;
+  margin: 0 0 44px;
+}
+
+.warningWrapper {
+  margin-top: 32px;
+}
+
+.content {
+  display: grid;
+  grid-area: content;
+  grid-auto-flow: dense;
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fill, 296px);
+  justify-content: center;
+  padding: 48px 0;
+
+  @include tablet-portrait {
+    justify-content: space-around;
+  }
+
+  @include tablet-landscape {
+    justify-content: start;
+  }
+}
+
+.createProposal {
+  margin-top: 56px;
+
+  @include tablet-landscape {
+    margin-top: 32px;
+  }
+}

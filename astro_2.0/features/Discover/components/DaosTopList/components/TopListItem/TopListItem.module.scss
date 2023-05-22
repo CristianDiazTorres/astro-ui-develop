@@ -1,0 +1,112 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  color: var(--color-neutral-60);
+  cursor: pointer;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 24px 2fr 80px 60px;
+  padding: 12px 0;
+  transition: background-color 0.2s ease-out;
+
+  white-space: nowrap;
+
+  @include tablet-portrait {
+    grid-template-columns: 48px 2fr 130px 1fr;
+  }
+
+  &:hover {
+    background-color: var(--color-neutral-20);
+  }
+}
+
+.index {
+  @extend %subtitle3;
+  @include centralize;
+}
+
+.name {
+  align-items: center;
+  display: flex;
+}
+
+.flag {
+  margin-right: 12px;
+}
+
+.details {
+  width: 142px;
+
+  @include tablet-portrait {
+    width: 265px;
+  }
+}
+
+.daoName {
+  @extend %title3;
+  @include ellipse-text;
+  color: var(--color-black);
+}
+
+.address {
+  @extend %caption1;
+  align-items: center;
+  color: var(--color-neutral-60);
+  display: block;
+  word-break: break-all;
+}
+
+.addressId {
+  display: inline;
+  margin-right: 6px;
+}
+
+.copyAddress {
+  display: inline-block;
+}
+
+.proposals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.value {
+  @extend %title3;
+  color: var(--color-black);
+  display: flex;
+  justify-content: flex-start;
+  white-space: nowrap;
+
+  &.right {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
+.trend {
+  @extend %title5;
+  @include centralize;
+  grid-area: trend;
+  justify-content: flex-start;
+
+  &.positive {
+    color: var(--color-brand-green);
+  }
+
+  &.negative {
+    color: var(--color-brand-coral-red);
+  }
+}
+
+.trendIcon {
+  width: 12px;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}

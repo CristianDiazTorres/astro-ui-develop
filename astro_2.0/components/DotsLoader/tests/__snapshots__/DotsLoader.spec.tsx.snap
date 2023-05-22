@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dots loader Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="p1"
+    />
+    <div
+      class="p2"
+    />
+    <div
+      class="p3"
+    />
+    <div
+      class="p4"
+    />
+  </div>
+</div>
+`;

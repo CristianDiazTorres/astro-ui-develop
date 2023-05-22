@@ -1,0 +1,876 @@
+{
+  "allCommunities": "All Communities",
+  "allDaos": "All DAOs",
+  "myDaos": "My DAOs",
+  "myFeed": "My Feed",
+  "myProposalsFeed": "My Proposals Feed",
+  "globalFeed": "Global Feed",
+  "actionsLibrary": "Actions Library",
+  "daosAndUsers": "DAOs and Users",
+  "daoFunds": "DAO funds",
+  "createNewDao": "Create new DAO",
+  "loading": "Loading",
+  "youHaveSeenItAll": "You have seen it all",
+  "daoMembers": "DAO Members",
+  "membersGroups": "Members/Groups",
+  "settings": "Settings",
+  "nfts": "NFTs",
+  "bounties": "Bounties",
+  "transfers": "Transfers",
+  "polls": "Polls",
+  "groups": "Groups",
+  "activeProposals": "active proposals",
+  "function calls": "Function Calls",
+  "customFunctionCallTemplates": "Custom Function Calls Templates",
+  "cfcLibrary": "Function Call Library",
+  "proposalsInTotal": "proposals in total",
+  "propose": "Propose",
+  "viewProposal": "View Proposal",
+  "daoSettings": "DAO Settings",
+  "popupsInfoWarning": "Please make sure pop-ups and redirects are allowed on this page, otherwise proposal may fail to be created.",
+  "successProposalNotification": "The blockchain transactions might take some time to perform, please visit DAO details page in few seconds",
+  "daoConfig": "DAO Config",
+  "votingPolicy": "Voting Policy",
+  "policyAffectedProposalsTitle": "Change {{title}} Snapshot",
+  "policyAffectedProposalsText": "The proposed changes in {{title}} will affect the other proposals. Further updates might get rewritten if the current proposal won't get resolved before.",
+  "allMembers": "All Members",
+  "noProposalsHere": "No proposals here",
+  "noMoreResults": "No more results",
+  "governance": "Governance",
+  "financial": "Financial",
+  "members": "Members",
+  "reportAnIssue": "Report an issue",
+  "leaveFeedback": "Leave feedback",
+  "termsAndConditions": "Terms and Conditions",
+  "releaseNotes": "Release notes",
+  "testnetEnv": "Testnet env",
+  "filterByStatus": "Filter by status",
+  "filterByProposalStatus": "Filter by proposal status",
+  "numberOfVotes": "Number of votes",
+  "numberOfTransactions": "Number of transactions",
+  "activity": "Activity",
+  "noResultsFound": "No results found",
+  "users": "Users",
+  "archived": "Archived",
+  "youFollowed": "You Followed",
+  "followed": "Followed",
+  "confirmUnsubscribe": "Are you sure you want to unsubscribe from",
+  "confirmDeposit": "Enter the deposit amount",
+  "depositToDao": "Deposit to DAO",
+  "deposit": "Deposit",
+  "joinDao": "Join DAO",
+  "continue": "Continue",
+  "threshold": "Threshold",
+  "amount": "Amount",
+  "minimumSearchCharacters": "Please enter at least 3 characters to search",
+  "searchBountyPlaceholder": "Search Bounty Name",
+  "all": "All",
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "selectedProposals": "Selected {{length}} proposal{{plural}}",
+  "filterByProposer": "Filter by proposer",
+  "ascending": "Ascending",
+  "descending": "Descending",
+  "noDataFound": "No data found",
+  "copyPageUrl": "Copy page URL",
+  "copiedSuccessfully": "Copied successfully",
+  "view": "View",
+  "edit": "Edit",
+  "bountiesPage": {
+    "successClaimBountyNotification": "The blockchain transactions might take some time to perform, please visit the page in few seconds",
+    "comingSoon": "Coming Soon",
+    "bounty": "Bounty",
+    "completed": "Completed"
+  },
+  "common": {
+    "clickToUploadImage": "Click here to upload image",
+    "clickToChangeImage": "Click here to change image"
+  },
+  "chart": {
+    "month": "1M",
+    "threeMonths": "3M",
+    "sixMonths": "6M",
+    "year": "1Y",
+    "all": "All",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly"
+  },
+  "notifications": {
+    "transactionDelay": "The blockchain transactions might take some time to perform, please visit DAO details page in few seconds.",
+    "noArchivedNotifications": "There are no archived notifications yet"
+  },
+  "components": {
+    "appFooter": {
+      "askQuestion": "Ask a question",
+      "reportAnIssue": "Report an issue",
+      "githubRepo": " Github repo",
+      "opensourceAsIs": "SputnikDAO 2021-2022. The software is an open source and provided “as is”, without warranty of any kind.",
+      "communityDeveloped": "Community developed. Not audited. Use at your own risk.",
+      "stats": "Stats",
+      "swaggerApi": "Swagger API"
+    },
+    "daoDetails": {
+      "proposalTrackerCard": {
+        "active": "active",
+        "activePlural": "active",
+        "proposal": "proposal",
+        "proposals": "proposals",
+        "proposalsInTotal": "proposals in total",
+        "createProposal": "Create proposal"
+      }
+    },
+    "daoDetailsPreview": {
+      "daoFunds": "DAO Funds",
+      "daoMembersAndGroups": "Members/Groups"
+    },
+    "transactionDetailsWidget": {
+      "warning": "Warning",
+      "gas": "Gas",
+      "tGas": "TGas",
+      "bond": "Bond"
+    }
+  },
+  "comments": {
+    "sendButton": "Send",
+    "noComments": "No comments yet",
+    "startTyping": "Start typing...",
+    "youReportedThisMessage": "You have reported this message",
+    "thisMessageWasReported": "This message was reported",
+    "commentsSpamProtection": "Due to spam protection no more than 5 messages per minute are allowed."
+  },
+  "manageGroups": {
+    "groupIncorrectCharactersError": "Incorrect Group name - you can use letters and numbers only with hyphens and spaces in the middle.",
+    "preventDeleteLastGroupWithMembers": "You can't delete last group with members"
+  },
+  "createDAO": {
+    "createNewDAO": "Create new DAO",
+    "createNewDAOWay": "A DAO is a new way for people to organize and work together",
+    "daoIncorrectLengthError": "Incorrect DAO name - at least 3 characters expected.",
+    "daoIncorrectCharactersError": "Incorrect DAO name - you can use letters and numbers only with hyphens and spaces in the middle.",
+    "daoAlreadyExist": "Dao with such address already exists.",
+    "daoIncorrectURLError": "Enter correct URL!",
+    "daoNameForm": {
+      "daoNameAndPurpose": "DAO name and purpose",
+      "daoFieldsDescription": "All fields bellow, unless otherwise noted are required.",
+      "daoName": "DAO Name",
+      "daoSampleName": "Sample DAO Name",
+      "daoPurpose": "Purpose",
+      "daoSampleText": "Sample text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient."
+    },
+    "daoLegalStatus": {
+      "daoKYC": "KYC",
+      "daoKYCDescription": "Please explain your DAO`s Legal Status and Jurisdiction (if known).",
+      "daoKYCDescriptionPlaceholder": "Legal Status",
+      "daoKYCLink": "Please attach a link to the relevant document as proof of legal status.",
+      "daoKYCLinkPlaceholder": "https://Legal_Document"
+    },
+    "proposals": {
+      "proposalsCreation": "Proposal creation",
+      "description": "Choose what creation rights you give DAO groups. This can be changed in settings later."
+    },
+    "voting": {
+      "votingPermissions": "Voting permissions",
+      "description": "Choose what voting rights you give DAO groups."
+    },
+    "daoLinksForm": {
+      "daoLinks": "Links and socials",
+      "daoLinksDescription": "Looking to grow the DAO members? Add links to allow people to learn more about your DAO."
+    },
+    "daoRulesForm": {
+      "daoSetRules": "Set rules for your DAO",
+      "daoSetRulesDescription": "All fields bellow, unless otherwise noted are required.",
+      "daoSetRulesChooseATemplate": "Choose a template",
+      "daoRulesTemplate": {
+        "daoRulesTemplateCustom": "Custom",
+        "daoRulesTemplateClub": "Club",
+        "daoRulesTemplateClubDescription": "A small circle of friends\nA group of fans\nA social club",
+        "daoRulesTemplateFoundation": "Foundation",
+        "daoRulesTemplateFoundationDescription": "A group giving donations\nAn organization funding community projects\nA fund for open-source projects",
+        "daoRulesTemplateCorporation": "Corporation",
+        "daoRulesTemplateCorporationDescription": "A business with shareholders\nA startup or company",
+        "daoRulesTemplateCooperative": "Cooperative",
+        "daoRulesTemplateCooperativeDescription": "A business with members\nA creative collective"
+      },
+      "daoRules": {
+        "daoRulesAll": "All",
+        "daoRulesAllDescription": "Anyone with a NEAR wallet.",
+        "daoRulesMembers": "Members",
+        "daoRulesMembersDescription": "Only members of your DAO",
+        "daoRulesDemocratic": "Democratic",
+        "daoRulesDemocraticDescription": "Every member gets 1 vote.",
+        "daoRulesTokenWeighted": "Token weighted",
+        "daoRulesTokenWeightedDescription": "More tokens more voting power!",
+        "daoRulesFlat": "Flat",
+        "daoRulesFlatDescription": "No groups; all members have equal access.",
+        "daoRulesGroups": "Groups and Committees",
+        "daoRulesGroupsDescription": "Specific groups can vote on specific proposals."
+      },
+      "daoRulesSections": {
+        "daoRulesProposals": "Proposals",
+        "daoRulesProposalsDescription": "Who can submit proposals to your DAO? (submit is vote)",
+        "daoRulesVoting": "Voting Power",
+        "daoRulesVotingDescription": "Carefully pick to not let people who own the token but not part of the DAO overtake you!",
+        "daoRulesStructure": "Structure",
+        "daoRulesStructureDescription": "Select level of access to vote on proposals."
+      }
+    },
+    "daoFlagForm": {
+      "daoFlagCreate": "Lets create your flag!",
+      "daoFlagCreateDescription": "Both fields are optional. If you skip, default image will be used instead. An image and a logo together form a flag of your DAO!",
+      "daoFlagCoverUpload": "Upload your “Cover”",
+      "daoFlagCoverUploadDescription": "Cover will be used as a branded letterhead of your proposals, also small icon of your flag won’t include logo on it.",
+      "daoFlagCoverUploadRequirements": "Rectangular image 3x4 proportions",
+      "daoFlagLogoUpload": "Upload your “Logo”",
+      "daoFlagLogoUploadDescription": "Logo will be placed on top of your flag and will be visible on your full view DAO details.",
+      "daoFlagLogoUploadRequirements": "Square image, 400x400 pixels"
+    },
+    "daoPreviewForm": {
+      "daoPreviewHeader": "Preview of your custom DAO assets",
+      "daoPreviewFlagAndIcon": "Flag and Icon",
+      "daoPreviewLetterhead": "Letterhead"
+    },
+    "daoPreviewFutureForm": {
+      "daoPreviewFuture": "Preview of your future DAO",
+      "daoMakeSureDescription": "Make sure everything right and clear, this is how users will see your DAO on the platform!"
+    },
+    "daoGroupsForm": {
+      "addGroups": "Add groups",
+      "addGroupsDescription": "Looking to grow the DAO members? Add links to allow people to learn more about your DAO.",
+      "defaultGroup": "Default groups",
+      "defaultGroupDescription": "You can’t delete them",
+      "customGroup": "Custom groups",
+      "deleteModalTitle": "Are you sure you want to delete the group",
+      "deleteModalSubtitle": "Proposal will be created to delete this group After confirmation",
+      "deleteModalAction": "Delete group",
+      "resetModalTitle": "Are you sure you want to Reset edits?",
+      "resetModalSubtitle": "The action cannot be undone. All data entered will be reset.",
+      "resetModalAction": "Reset edits"
+    },
+    "daoMembersForm": {
+      "addMembers": "Add Members",
+      "addMembersDescription": "Add members to your DAO.",
+      "newMemberNamePlaceholder": "NEAR name",
+      "newMemberRolePlaceholder": "Select group"
+    },
+    "daoAssets": {
+      "createDaoAssets": "Create DAO assets",
+      "createDaoAssetsDescription": "Both fields are optional. If you skip, default image will be used instead. An image and a logo together form a flag of your DAO!"
+    },
+    "daoSubmitForm": {
+      "daoSubmitError": "There are errors in your form. Please, check validation messages on the page.",
+      "daoSubmitLiability": "Creating a DAO is a liability ",
+      "daoTermsAndConditionsLink": "Terms and Conditions",
+      "daoCannotBeDeleted": "DAOs can not be deleted!",
+      "daoCreateButton": "Create DAO"
+    },
+    "daoExists": "This DAO is already exists",
+    "optional": "Optional"
+  },
+  "myDAOsPage": {
+    "noDAOs": "You have no DAOs, but you can",
+    "createDAOLink": "create",
+    "noDAOsEnd": "one",
+    "myDAOs": "My DAOs",
+    "createNewDAO": "Create new DAO"
+  },
+  "daoDashboard": {
+    "daoFunds": "DAO funds",
+    "bounties": "Bounties",
+    "nfts": "NFTs",
+    "proposals": "Proposals",
+    "activeProposals": "active proposals",
+    "proposalsInTotal": "proposals in total"
+  },
+  "delegateVoting": {
+    "delegate": "Delegate",
+    "retract": "Retract",
+    "voteActions": "Vote Actions",
+    "delegatedToken": "Delegated {{token}}",
+    "policyDescription": "A DAO member can only cast a vote if they hold an amount of tokens equal or greater to the minimum balance. When a vote is cast the total token weight in that direction compares against the threshold. If that token weight is greater than the threshold, the proposal finalizes with a pass or fail."
+  },
+  "daoDetailsCreateButton": {
+    "draft": {
+      "label": "Draft a Proposal",
+      "description": "for preliminary discussion"
+    },
+    "proposal": {
+      "label": "Proposal",
+      "description": "for a general vote for a decision"
+    }
+  },
+  "daoDetailsMinimized": {
+    "delegates": "Delegate",
+    "drafts": "Drafts",
+    "proposals": "Proposals",
+    "funds": "Funds",
+    "members": "Members",
+    "settings": "Settings",
+    "nfts": "NFTs",
+    "bounties": "Bounties",
+    "polls": "Polls",
+    "createProposal": "Create Proposal",
+    "treasury": "Treasury",
+    "createGovernanceToken": "Create Governance Token",
+    "createDraft": "Create Draft"
+  },
+  "feed": {
+    "filters": {
+      "chooseAFilter": "Choose a filter",
+      "all": "All",
+      "active": "Active",
+      "approved": "Approved",
+      "failed": "Failed",
+      "voteNeeded": "Vote Needed",
+      "vote": "Vote",
+      "transfers": "Transfers"
+    }
+  },
+  "allDAOsFilter": {
+    "mostActive": "Most Active",
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "biggestFunds": "Biggest funds",
+    "numberOfMembers": "Number of members"
+  },
+  "loader": {
+    "title": "Receiving data from the contract",
+    "waitSomeTime": "This may take some time"
+  },
+  "proposalCard": {
+    "signingTransaction": "Signing transaction",
+    "finalize": "Finalize",
+    "draft": "Draft",
+    "created": "Created",
+    "timeLeft": "left",
+    "votingEnded": "Voting ended",
+    "voteInDao": {
+      "targetDao": {
+        "label": "DAO",
+        "placeholder": "Select DAO",
+        "required": "DAO is a required field"
+      },
+      "proposal": {
+        "label": "Related Proposal",
+        "placeholder": "Select Proposal",
+        "required": "Proposal is a required field"
+      },
+      "vote": {
+        "label": "Vote",
+        "placeholder": "Vote",
+        "required": "Vote is a required field"
+      },
+      "noProposalsToVote": "No proposals to vote"
+    },
+    "proposalID": "Proposal ID:",
+    "proposalType": "Proposal type: ",
+    "proposalOwner": "Proposer",
+    "proposalDescription": "Description",
+    "proposalAmount": "Amount",
+    "proposalTarget": "Target",
+    "proposalTargetPlaceholder": "Specify target account",
+    "bountyAvailableClaims": "Available Claims",
+    "bountyDaysToComplete": "Days to Complete",
+    "bountyTimeToComplete": "Time to Complete",
+    "newDAOName": "New DAO name",
+    "newDAOPurpose": "New Purpose",
+    "newDAOLinks": "New DAO links",
+    "newDAOCover": "New Cover",
+    "newDAOLogo": "New Logo",
+    "newDAOLegalStatus": "DAO’s Legal Status",
+    "newDAOLegalDoc": "Legal Document",
+    "newDAOLegalStatusHint": "Public Limited Company",
+    "newDAOLegalDocHint": "Link",
+    "daoGroup": "Group",
+    "whoVotes": "Who votes",
+    "consensus": "Consensus",
+    "person": "Person",
+    "proposals": "Proposals",
+    "proposalBonds": "Bonds to create proposals",
+    "proposalBondExpirationTime": "Time before proposals expire",
+    "proposalBounties": "Bounties",
+    "proposalClaimBounty": "Bonds to claim bounty",
+    "proposalBountyUnclaimTime": "Time to unclaim a bounty without penalty",
+    "newGroupName": "New Group Name",
+    "initialMemberName": "Initial Member Name",
+    "group": "Group",
+    "chooseGroup": "Choose Group",
+    "smartContractAddress": "Smart Contract Address",
+    "methodName": "Method Name",
+    "json": "JSON",
+    "deposit": "Deposit",
+    "preview": "Preview",
+    "timeExpired": "Time expired",
+    "proposalTypes": {
+      "groupTransferAddBounty": "Transfer/Add bounty",
+      "proposeTransfer": "Propose a Transfer",
+      "proposeBounty": "Propose to Create a Bounty",
+      "groupChangeConfig": "Change Config",
+      "proposeDAOName": "Propose to Change DAO Name",
+      "proposeDAOPurpose": "Propose to Change DAO Purpose",
+      "proposeDAOLinks": "Propose to Change DAO Links",
+      "proposeDAOFlagAndLogo": "Propose to Change DAO Flag and Logo",
+      "proposeLegalStatusAndDoc": "Propose to change DAO Legal Status and Doc",
+      "groupChangePolicy": "Change Policy",
+      "proposeChangePolicy": "Propose to Change Voting Policy",
+      "proposeBondsAndDeadlines": "Propose to Change Bonds and Deadlines",
+      "proposeGroup": "Propose to Create a Group",
+      "groupChangeMembers": "Change Members of DAO",
+      "proposeAddMember": "Propose to Add Member to Group",
+      "proposeRemoveMember": "Propose to Remove Member from Group",
+      "groupVote": "Vote",
+      "proposePoll": "Propose a Poll",
+      "groupFunctionCall": "Function Call",
+      "proposeCustomCall": "Custom Function Call",
+      "createToken": "Create Token"
+    },
+    "upgradeContent": {
+      "groups": "Groups",
+      "groupName": "Group name",
+      "groupQuorum": "Group quorum is",
+      "quorumDescr": "What is the quorum required\nfor the decision of this group",
+      "members": "Members"
+    },
+    "acceptStakingContract": {
+      "stakingContract": "Staking Contract"
+    },
+    "deployStakingContract": {
+      "tokenId": "Token ID",
+      "hours": "hours",
+      "unstakingPeriod": "Unstaking Period"
+    },
+    "functionCalls": {
+      "proposeGetUpgradeCode": {
+        "description": "Upgrading your DAO requires you to retrieve the new code you want your DAO to run. This proposal is to get a copy of the upgrade code. The code comes from the Sputnik DAO Factory, the same place your DAO came from when you created it."
+      },
+      "proposeUpgradeSelf": {
+        "description": "Now that your DAO has a copy of the code it wants to run, it's time to propose that the DAO \"Upgrades Itself.\" This proposal will switch the DAO from running its old code to the code you retrieved in step 1."
+      },
+      "proposeRemoveUpgradeCode": {
+        "description": "Your DAO is now running the latest code! This proposal is to delete the upgrade code which you retrieved from the factory. Deleting that code saves NEAR for your DAO. It's safe to delete that code because smart contracts always store a copy of the code they're running."
+      },
+      "proposeCreateDao": {
+        "description": "Because V2 DAOs can not be upgraded we will create a new DAO running the V3 smart contract. After this step we will transfer all assets to the V3 DAO."
+      },
+      "proposeTransferFunds": {
+        "description": "To manage our assets with our new V3 DAO we will transfer them from our old V2 DAO. We're creating the proposals all at once but each proposal needs separate approval."
+      }
+    }
+  },
+  "createProposal": {
+    "header": {
+      "governanceTokenSetup": "Governance Token Setup",
+      "changePolicy": "Proposal type: Change Policy",
+      "proposalCreation": "Proposal Creation",
+      "votingPermissions": "Voting Permissions",
+      "migrate": "Migrate",
+      "createDao": "Create DAO",
+      "transferDaoFunds": "Transfer DAO funds",
+      "upgrade": "Upgrade",
+      "getCodeFromFactory": "Get Code From Factory",
+      "upgradeDao": "Upgrade DAO",
+      "recoverStorageCosts": "Recover Storage Costs",
+      "transferBountyDone": "Proposal type: Transfer/Bounty Done",
+      "completeBounty": "Complete Bounty",
+      "customFunction": "Custom Function",
+      "distributionOfTokens": "Distribution of tokens",
+      "createGovernanceToken": "Create Governance Token",
+      "deployStakingContract": "Deploy Staking Contract",
+      "changeConfig": "Change Config",
+      "createToken": "Create Token",
+      "group": "Group",
+      "createGovToken": "Create Governance Token",
+      "acceptStakingContract": "Adopt Staking Contract",
+      "changeVotingPolicy": "Change Voting Policy"
+    },
+    "countdown": "Countdown will be here"
+  },
+  "viewProposalCard": {
+    "proposalVariant": {
+      "voteInAnotherDao": "Vote in Another DAO",
+      "createBounty": "Create a Bounty",
+      "bountyDone": "Bounty Done",
+      "transfer": "Transfer",
+      "changeDaoName": "Change DAO name",
+      "changeDaoPurpose": "Change DAO purpose",
+      "changeDaoLinks": "Change DAO links",
+      "poll": "Poll",
+      "createGroup": "Create group",
+      "addMember": "Add member to Role",
+      "removeMember": "Remove member from Role",
+      "changeVotingPolicy": "Change Voting Policy",
+      "changeBonds": "Change Bonds and Deadlines",
+      "changeDaoFlag": "Change DAO flag",
+      "tokenDistribution": "Distribution of tokens",
+      "changeProposalCreationPermissions": "Proposal creation",
+      "changeProposalVotingPermissions": "Voting permissions",
+      "getCodeFromFactory": "Get Code From Factory",
+      "upgradeDao": "Upgrade DAO",
+      "recoverStorageCosts": "Recover Storage Costs",
+      "createDao": "Create DAO",
+      "deployStakingContract": "Deploy Staking Contract",
+      "contractAcceptance": "Adopt Staking Contract"
+    },
+    "proposalType": {
+      "addBounty": "Add Bounty",
+      "changePolicy": "Change Policy",
+      "changeConfig": "Change Config",
+      "functionCall": "Function Call"
+    }
+  },
+  "settingsPage": {
+    "drafts": "Drafts",
+    "daoPolicy": "DAO Policy",
+    "nameAndPurpose": "Name and Purpose",
+    "legalStatusAndDoc": "Legal Status and doc",
+    "links": "Links",
+    "flagAndLogo": "Flag and Logo",
+    "groupNames": "Group names",
+    "proposalCreation": "Proposal Creation",
+    "votingPolicy": "Voting Policy",
+    "votingPermissions": "Voting Permissions",
+    "bondAndDeadlines": "Bond and Deadlines",
+    "groups": "Groups",
+    "members": "Members",
+    "daoRules": "DAO Rules"
+  },
+  "tokensPage": {
+    "createGovernanceToken": "Create Governance Token",
+    "setupGovernanceToken": "Setup Governance Token"
+  },
+  "createGovernanceTokenPage": {
+    "tokenWeightedVoting": "Token weighted voting",
+    "createGovernanceToken": "Create Governance Token",
+    "underConstruction": "The feature is under construction",
+    "governanceTokenSetup": "Governance Token Setup",
+    "intro": {
+      "setupGovernanceToken": "Setup Governance Token",
+      "description": "In this wizard we'll set up your DAO for token holder participation. If\n        you haven't created your own NEP-141 fungible token then right now is a\n        good time to hit up <0>tkn.farm</0>. Then you will deploy a staking contract,\n        distribute tokens, and configure voting for holders.",
+      "warningTitle": "Setting up a governance token is a permanent change to your DAO.",
+      "warningDetails": "If you are unsure about taking this step it would be wise to research more and <0>experiment on testnet.</0> \n",
+      "advOne": "Creating your own governance token costs less than 3 NEAR at tkn.farm. Your NEP-141 fungible token isn't limited to governance. It's there for anything you and your community dream up.",
+      "advTwo": "Be mindful when distributing your tokens. By default, anyone who controls more than 50% of the token supply can attack your DAO. \n",
+      "advThree": "Owning your community token will be the smoothest route for people to vote in your DAO. Configure your groups and quorums so you never have to manually add or remove members in the future.",
+      "startToCreate": "Start to create",
+      "faq": "FAQ",
+      "accordions": {
+        "first": {
+          "title": "What are the problems with tokens?",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in ultricies nibh dui sed. Semper tortor ultricies sit consequat semper. Massa ultrices ultricies gravida placerat etiam. Donec faucibus at risus morbi ac libero gravida netus. Viverra mi, urna at tempor. Sollicitudin aenean habitant sollicitudin odio. Diam tellus ut justo, odio. Tristique tellus sollicitudin habitant mauris. Velit tortor quam habitant purus tincidunt tempor viverra. Lacinia suspendisse sapien viverra mi arcu pharetra tincidunt neque. Molestie volutpat tempor massa sed amet cras risus."
+        },
+        "second": {
+          "title": "What are the problems with tokens?",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in ultricies nibh dui sed. Semper tortor ultricies sit consequat semper. Massa ultrices ultricies gravida placerat etiam. Donec faucibus at risus morbi ac libero gravida netus. Viverra mi, urna at tempor. Sollicitudin aenean habitant sollicitudin odio. Diam tellus ut justo, odio. Tristique tellus sollicitudin habitant mauris. Velit tortor quam habitant purus tincidunt tempor viverra. Lacinia suspendisse sapien viverra mi arcu pharetra tincidunt neque. Molestie volutpat tempor massa sed amet cras risus."
+        },
+        "third": {
+          "title": "What are the problems with tokens?",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in ultricies nibh dui sed. Semper tortor ultricies sit consequat semper. Massa ultrices ultricies gravida placerat etiam. Donec faucibus at risus morbi ac libero gravida netus. Viverra mi, urna at tempor. Sollicitudin aenean habitant sollicitudin odio. Diam tellus ut justo, odio. Tristique tellus sollicitudin habitant mauris. Velit tortor quam habitant purus tincidunt tempor viverra. Lacinia suspendisse sapien viverra mi arcu pharetra tincidunt neque. Molestie volutpat tempor massa sed amet cras risus."
+        }
+      }
+    },
+    "selectToken": {
+      "header": "Let`s start! Select Token",
+      "createToken": "Create Token",
+      "chooseExisting": "Choose existing",
+      "nextStep": "Next Step"
+    },
+    "createToken": {
+      "progress": {
+        "createToken": "Create Token",
+        "contractAcceptance": "Contract Acceptance",
+        "tokenDistribution": "Token Distribution",
+        "changeDaoPolicy": "Change DAO Policy",
+        "selectToken": "Select Token",
+        "deployStakingContract": "Deploy Staking Contract",
+        "acceptStakingContract": "Adopt Staking Contract",
+        "proposalCreation": "Proposal Creation",
+        "votingPermissions": "Voting Permissions",
+        "stakeTokens": "Stake tokens",
+        "delegateVoting": "Delegate Voting"
+      }
+    }
+  },
+  "captcha": {
+    "dragSliderRight": "Drag the slider to the right"
+  },
+  "discover": {
+    "title": "Discovery",
+    "searchDaoName": "Search DAO name",
+    "daoActivity": "DAO Activity",
+    "financial": "Financial",
+    "generalInfo": "General Info",
+    "usersAndActivity": "Users and Activity",
+    "governance": "Governance",
+    "flow": "Flow",
+    "tvl": "TVL",
+    "tokens": "Tokens",
+    "activeDaos": "Active DAOs",
+    "daoName": "DAO Name",
+    "numberOfProposals": "Number of Proposals",
+    "lastMonth": "Last Month",
+    "allUsersPerDao": "All users per DAO",
+    "activeUsers": "Active Users",
+    "allUsersOnAPlatform": "All users on a platform",
+    "usersMembersOfDao": "Users that are members of a DAO",
+    "averageNumberOfUsersPerDao": "Average number of users per DAO",
+    "numberOfInteractions": "Number of interactions",
+    "averageNumberOfInteractionsPerDao": "Average number of interactions per DAO",
+    "users": "Users",
+    "members": "Members",
+    "voteThroughRate": "Vote through rate",
+    "totalIn": "Total In",
+    "totalOut": "Total Out",
+    "incomingTransactions": "Incoming transactions",
+    "outgoingTransactions": "Outgoing transactions",
+    "platformTvl": "Platform TVL",
+    "vlInBountiesGrants": "VL in Bounties/Grants",
+    "numberOfFts": "Number of FTs",
+    "vlOfFts": "VL of FTs",
+    "numberOfNfts": "Number of NFTs",
+    "numberOfBounties": "Number of Bounties",
+    "vlOfBounties": "VL of Bounties",
+    "activity": "Activity",
+    "avgGroupsDao": "Avg. Groups/DAO",
+    "activeProposals": "Active Proposals",
+    "activeVotes": "Active Votes"
+  },
+  "header": {
+    "search": {
+      "placeholder": "Search",
+      "seeAll": "See all",
+      "minimalChars": "Please enter at least 3 characters to search",
+      "daos": "DAOS",
+      "proposals": "Proposals",
+      "people": "People",
+      "comments": "Comments",
+      "drafts": "Drafts"
+    },
+    "myAccount": "My Account",
+    "disconnect": "Disconnect",
+    "chooseWallet": "Choose wallet",
+    "wallets": {
+      "near": {
+        "type": "web"
+      },
+      "sender": {
+        "beta": "beta",
+        "type": "extension"
+      }
+    }
+  },
+  "myAccountPage": {
+    "header": "My account",
+    "walletId": "Wallet ID",
+    "email": "Email",
+    "phone": "Phone number",
+    "add": "Add",
+    "edit": "Edit",
+    "notification": "Notification",
+    "settings": "Settings",
+    "usaOnly": "only USA",
+    "requestKey": "Request key",
+    "allowanceVotingKeys": "Allowance voting keys",
+    "popup": {
+      "send": "Send",
+      "save": "Save",
+      "seconds": "sec",
+      "codeIsIncorrect": "Validation code is incorrect",
+      "email": {
+        "addTitle": "Add email",
+        "editTitle": "Edit email",
+        "message": "We will send you an email to confirm your new mail.",
+        "inputLabel": "Email",
+        "codeFrom": "Code from email",
+        "required": "Email is a required field",
+        "error": "Must be a valid email"
+      },
+      "phone": {
+        "addTitle": "Add phone number",
+        "editTitle": "Edit phone number",
+        "message": "We will send you a sms to confirm your new phone number.",
+        "inputLabel": "Phone number",
+        "codeFrom": "Code from sms",
+        "required": "Phone number is a required field",
+        "error": "Must be a valid phone number"
+      }
+    },
+    "notifications": {
+      "email": "Please, verify your email to enable notifications.",
+      "phone": "Please, verify your phone number to enable notifications."
+    }
+  },
+  "proposalVotes": {
+    "noGroup": "Non DAO members",
+    "title": "Votes",
+    "voices": "voices"
+  },
+  "daoPolicy": {
+    "title": "DAO Settings",
+    "backToSettingsOverview": "Back to settings overview",
+    "bondAndDeadlines": "Bond and deadlines",
+    "tabs": {
+      "proposalCreation": {
+        "title": "Proposal creation",
+        "description": "Choose what creation rights you give DAO groups. This can be changed in settings later."
+      },
+      "votingPermissions": {
+        "title": "Voting permissions",
+        "description": "Choose what voting rights you give DAO groups."
+      }
+    },
+    "settings": {
+      "proposals": {
+        "title": "Proposals",
+        "bondToCreateProposal": "Bond to create a proposal",
+        "timeBeforeProposalExpires": "Time before proposal expires"
+      },
+      "bounties": {
+        "title": "Bounties",
+        "bondToClaimABounty": "Bond to claim a bounty",
+        "timeToUnclaimBounty": "Time to unclaim a bounty without penalty"
+      },
+      "daoSettings": {
+        "title": "Voting policy"
+      },
+      "drafts": {
+        "title": "Draft proposals",
+        "allowNonDaoMembersToCreateDrafts": "Allow non DAO members to create draft proposals in DAO"
+      }
+    }
+  },
+  "validation": {
+    "mustBeAValidNumber": "Must be a valid number.",
+    "required": "Required",
+    "onlyFiveOptDecimals": "Only numbers with five optional decimal place please.",
+    "onlyValidNearAccounts": "Only valid near accounts are allowed.",
+    "groupAlreadyExists": "Group already exists",
+    "validUrl": "Must be a valid URL",
+    "canNotBeEmpty": "Cannot be empty",
+    "daoCanNotBeSpecifiedInThisField": "Current DAO can not be specified in this field",
+    "enterCorrectUrl": "Enter correct url!",
+    "tokenFormat": "It must be as Token ID:Token store format",
+    "methodNameInvalid": "Provided method name is not valid",
+    "jsonNotValid": "Provided JSON is not valid",
+    "atLeastThreeChars": "At least 3 characters expected.",
+    "lettersNumbersHyphensSpaces": "Only letters and numbers with hyphens and spaces in the middle"
+  },
+  "actions": {
+    "libraryDesc": "Add new functionality and power up your workflow with these templates",
+    "searchByTemplate": "Search by template name",
+    "sorting": "Sorting by",
+    "name": "Name",
+    "smartContractAddress": "Smart Contract address",
+    "usedNumberDaos": "Used in # DAOs",
+    "useInDao": "Use in DAO",
+    "copyToDao": "Copy to DAO",
+    "backToActionsLibrary": "Back to Actions Library",
+    "by": "by",
+    "usedInDaos": "Used in DAOs",
+    "templateName": "Template Name",
+    "methodName": "Method Name",
+    "deposit": "Deposit",
+    "tGas": "TGas",
+    "saveTemplate": "Save template",
+    "chooseDao": "Choose DAO",
+    "templateSavedSuccessfully": "Successfully saved proposal template",
+    "saveWarning": "Only councils can save templates to their DAOs",
+    "addTemplateName": "Add Name",
+    "templateNamePlaceholder": "Template Name",
+    "addTemplateDescription": "Add Description",
+    "templateDescriptionPlaceholder": "Template description"
+  },
+  "drafts": {
+    "breadcrumbs": {
+      "createDraft": "Create Draft",
+      "editDraft": "Edit Draft"
+    },
+    "feed": {
+      "headTitle": "Drafts",
+      "title": "Drafts",
+      "unreadDrafts": "Unread drafts",
+      "allDrafts": "All drafts",
+      "noDrafts": {
+        "title": "No drafts",
+        "createDraftButton": "Create Draft"
+      },
+      "filters": {
+        "title": "Filters",
+        "sort": {
+          "title": "Sort"
+        },
+        "category": {
+          "title": "Category",
+          "all": "All"
+        },
+        "view": {
+          "title": "Type",
+          "all": "All",
+          "unread": "Unread",
+          "saved": "Saved"
+        },
+        "state": {
+          "title": "State",
+          "all": "All",
+          "onDiscussionStatus": "On discussion",
+          "convertedToProposalStatus": "Converted to proposal"
+        }
+      },
+      "card": {
+        "lastActivity": "Last activity",
+        "justNow": "just now",
+        "minutesAgo": "ago",
+        "onDiscussionStatus": "On discussion",
+        "convertedToProposalStatus": "Converted to proposal",
+        "linkToConvertedProposal": "Link to converted proposal"
+      }
+    },
+    "editDraftPage": {
+      "title": "Edit Draft",
+      "comment": "Comment",
+      "saveDraftTooltip": "Save Draft",
+      "convertToProposalButton": "Convert to proposal",
+      "editButton": "Edit",
+      "deleteButton": "Delete",
+      "modalDeleteTitle": "Delete draft",
+      "modalDeleteMessage": "Are you sure you want to delete selected draft?"
+    },
+    "draftPage": {
+      "title": "DAO Draft"
+    },
+    "createDraftPage": {
+      "title": "Creating Draft",
+      "headTitle": "Create Draft",
+      "saveButton": "Save",
+      "placeholder": "Describe your draft...",
+      "titlePlaceholder": "Add draft name"
+    },
+    "comments": {
+      "placeholder": "Write a comment...",
+      "writeCommentButton": "Write a comment...",
+      "oneReply": "Reply",
+      "replies": "Replies",
+      "comments": "comments",
+      "comment": "comment",
+      "reply": "Reply",
+      "replyPlaceholder": "Reply...",
+      "edited": "Edited",
+      "editButton": "Edit",
+      "deleteButton": "Delete",
+      "modalDeleteTitle": "Delete comment",
+      "modalDeleteMessage": "Are you sure you want to delete selected comment?"
+    },
+    "backToFeed": "Back to Draft Feed",
+    "editableContent": {
+      "sendButton": "Send",
+      "cancelButton": "Cancel"
+    }
+  },
+  "logoSelector": {
+    "dropOrBrowse": "Drag & drop logo or browse",
+    "supportedFormat": "Supported format: IMG, PNG",
+    "maxSize": "MAX Size",
+    "selectFromTemplate": "or select from templates",
+    "proposeNewLogo": "Propose new logo"
+  }
+}

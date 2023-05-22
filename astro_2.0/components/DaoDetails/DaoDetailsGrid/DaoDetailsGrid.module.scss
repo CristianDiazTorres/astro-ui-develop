@@ -1,0 +1,259 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  @include card-shadow;
+  height: 440px;
+  max-width: 458px;
+  min-width: 270px;
+  transition: box-shadow 0.4s;
+  width: 100%;
+
+  &:hover {
+    box-shadow: 3px 2px 24px var(--color-black-opacity-25);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  position: relative;
+  width: 100%;
+}
+
+.general {
+  align-items: center;
+  display: flex;
+}
+
+.flagWrapper {
+  border: 1px solid var(--color-black-opacity-1);
+  border-radius: 50%;
+  height: 68px;
+  margin: 24px;
+  min-height: 68px;
+  min-width: 68px;
+  overflow: hidden;
+  position: relative;
+  width: 68px;
+
+  .flag {
+    background-position: center;
+    background-size: cover;
+    height: 68px;
+    width: 68px;
+  }
+
+  .flag.scaled {
+    transform: scale(2.45);
+  }
+
+  .logo {
+    @include centralize;
+    background-color: var(--color-black);
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.title {
+  padding: 12px 16px 12px 0;
+  position: relative;
+  width: 100%;
+
+  @include tablet-portrait {
+    padding-right: 24px;
+  }
+}
+
+.explorerLink {
+  position: absolute;
+  right: 24px;
+  top: 14px;
+}
+
+.name {
+  @include font(28px, 28px, 700);
+  @include ellipse-text;
+  font-family: 'Roboto', 'sans-serif';
+  line-height: 1.2;
+  width: calc(100% - 36px);
+
+  @include astro-mobile {
+    font-size: 20px;
+  }
+}
+
+.nameTooltip {
+  display: block;
+  max-width: 200px;
+  white-space: normal;
+}
+
+.address {
+  @include font(16px, 24px, 500);
+  align-items: center;
+  color: var(--color-neutral-60);
+  display: flex;
+  margin-top: 8px;
+  word-break: break-all;
+
+  @include tablet-portrait {
+    display: block;
+  }
+
+  @include astro-mobile {
+    font-size: 14px;
+  }
+}
+
+.addressId {
+  display: inline;
+  margin-right: 6px;
+}
+
+.copyAddress {
+  max-width: fit-content;
+}
+
+.description {
+  @include font(16px, 24px, 400);
+  height: 72px;
+  overflow: hidden;
+  padding: 0 24px;
+}
+
+.fundsAndMembers {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 24px;
+}
+
+.controls {
+  @include centralize;
+  justify-content: space-around;
+  padding: 14px;
+
+  @media (min-width: 480px) {
+    justify-content: space-between;
+    padding: 14px 28px;
+  }
+
+  @include tablet-landscape {
+    justify-content: space-around;
+    padding: 14px;
+  }
+
+  @include astro-desktop {
+    justify-content: space-between;
+    padding: 14px 28px;
+  }
+
+  @media (min-width: 1150px) {
+    padding: 14px 20px;
+  }
+
+  @include large-desktop {
+    padding: 14px 28px;
+  }
+}
+
+.controlIcon {
+  @include centralize;
+  border-radius: 6px;
+  transition: 0.2s linear;
+  width: 42px;
+
+  @media (min-width: 480px) {
+    border-radius: 8px;
+    width: auto;
+  }
+
+  @include tablet-landscape {
+    border-radius: 6px;
+    width: 42px;
+  }
+
+  @include astro-desktop {
+    border-radius: 8px;
+    width: auto;
+  }
+
+  > button {
+    color: var(--color-neutral-70);
+    width: 100%;
+
+    @media (min-width: 480px) {
+      @include font(10px, 15px, 500);
+      flex-direction: row;
+      padding: 0 14px;
+    }
+
+    @include tablet-landscape {
+      @include font(8px, 12px, 400);
+      flex-direction: column;
+      padding: 0;
+    }
+
+    @include astro-desktop {
+      @include font(10px, 15px, 500);
+      flex-direction: row;
+      padding: 0 14px;
+    }
+  }
+
+  svg {
+    width: 16px;
+
+    @media (min-width: 480px) {
+      margin: 0 6px 0 0;
+    }
+
+    @include tablet-landscape {
+      margin: 0 0 4px;
+    }
+
+    @include astro-desktop {
+      margin: 0 6px 0 0;
+    }
+  }
+}
+
+.controlIcon:hover {
+  background-color: var(--color-neutral-30);
+  color: var(--color-brand-black);
+
+  > button {
+    color: var(--color-brand-black);
+  }
+}
+
+.proposals {
+  @include centralize;
+  flex-direction: column;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.proposalsTitle {
+  margin-bottom: 8px;
+
+  &.active {
+    font-size: 1.375em;
+    font-weight: 300;
+    line-height: 1.25em;
+  }
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.proposalsSubtitle {
+  color: var(--color-neutral-60);
+  margin: 0;
+  white-space: nowrap;
+}

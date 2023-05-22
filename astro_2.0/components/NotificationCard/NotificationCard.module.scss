@@ -1,0 +1,260 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  margin-bottom: 2px;
+  min-height: 78px;
+  min-width: 272px;
+  position: relative;
+}
+
+.content {
+  background: var(--color-neutral-20);
+  border-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  grid-column-gap: 6px;
+  grid-template-areas:
+    'flag text control'
+    'flag description description'
+    'flag time .';
+  grid-template-columns: 62px auto 43px;
+  left: 0;
+  max-width: 320px;
+  min-height: 78px;
+  padding: 2px 6px 0;
+  position: relative;
+  top: 0;
+  transition: box-shadow 0.4s, transform 0.2s ease-out;
+  width: 100%;
+  z-index: 1;
+}
+
+.swipedLeft {
+  transform: translateX(-95px);
+  @include tablet-landscape {
+    transform: translateX(0);
+  }
+}
+
+.mobileActionsPanel {
+  align-items: center;
+  background-color: var(--color-error-50);
+  border-radius: 8px;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.flagContainer {
+  grid-area: flag;
+}
+
+.flagWrapper {
+  height: 62px;
+  padding: 5px 0 0 8px;
+  position: relative;
+}
+
+.flag {
+  flex: 0 0 47px;
+  height: 53px;
+  width: 47px;
+}
+
+.type {
+  bottom: 8px;
+  position: absolute;
+  right: 0;
+}
+
+.status {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.text {
+  @include font(12px, 18px, 400);
+  grid-area: text;
+  margin: 10px 0;
+}
+
+.description {
+  @include font(12px, 18px, 400);
+  grid-area: description;
+  margin-bottom: 8px;
+  padding-right: 16px;
+
+  @include tablet-landscape {
+    @include font(14px, 21px, 400);
+  }
+}
+
+.descriptionHeader {
+  @include font(12px, 18px, 400);
+  color: var(--color-neutral-60);
+  margin-bottom: 4px;
+}
+
+.time {
+  @include font(10px, 10px, 400);
+  align-items: flex-end;
+  color: var(--color-neutral-60);
+  display: flex;
+  grid-area: time;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.control {
+  display: flex;
+  grid-area: control;
+  justify-content: flex-end;
+  margin-top: 9px;
+}
+
+.markReadButton {
+  align-items: center;
+  color: var(--color-black);
+  display: flex;
+  font-size: 10px;
+  padding: 0 6px 0 2px;
+  transition: color 0.2s;
+}
+
+.markReadIcon {
+  margin-right: 2px;
+}
+
+.deleteIcon {
+  width: 16px;
+
+  &:hover {
+    color: var(--color-brand-purple);
+  }
+}
+
+.deleteButton {
+  display: none;
+  @include tablet-landscape {
+    display: block;
+  }
+}
+
+.muteIcon {
+  height: 24px;
+
+  button {
+    color: var(--color-primary-80);
+    transition: color 0.2s;
+  }
+
+  button:hover {
+    color: var(--color-primary-60);
+  }
+
+  button:disabled {
+    color: var(--color-neutral-50);
+  }
+
+  button:disabled:hover {
+    color: var(--color-neutral-50);
+  }
+}
+
+.muteIcon.muted {
+  button {
+    color: var(--color-neutral-60);
+  }
+
+  button:hover {
+    color: var(--color-neutral-80);
+  }
+}
+
+.new {
+  background: var(--color-white);
+  box-shadow: 3px 2px 24px var(--color-black-opacity-1);
+}
+
+.hub {
+  max-width: none;
+  transition: box-shadow 0.4s, transform 0.2s ease-out;
+
+  @include tablet-portrait {
+    border-radius: 8px;
+    grid-template-areas:
+      'flag text control'
+      'flag description description'
+      'flag time .';
+    grid-template-columns: 62px auto auto;
+    grid-template-rows: auto auto 22px;
+    margin-bottom: 2px;
+    padding: 2px 12px 0 6px;
+
+    &:hover {
+      box-shadow: 0 9px 30px var(--color-black-opacity-14);
+      z-index: 2;
+    }
+  }
+
+  .text {
+    @include tablet-portrait {
+      margin: 8px 0;
+    }
+
+    @include tablet-landscape {
+      @include font(14px, 21px, 400);
+      margin: 10px 0;
+    }
+  }
+
+  .time {
+    justify-content: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .markRead {
+    @include tablet-portrait {
+      display: block;
+      flex-shrink: 0;
+      margin-right: 14px;
+    }
+  }
+
+  .markReadButton:hover {
+    color: var(--color-brand-purple);
+  }
+}
+
+.hub.new {
+  @include tablet-portrait {
+    box-shadow: 0 4px 14px var(--color-black-opacity-1);
+
+    &:hover {
+      box-shadow: 0 9px 30px var(--color-black-opacity-14);
+    }
+  }
+}
+
+.mobileActionsPanel {
+  .deleteButton {
+    display: block;
+  }
+
+  .markReadIcon,
+  .deleteIcon {
+    color: var(--color-white);
+  }
+
+  .markRead {
+    margin: 0 4px 0 16px;
+    order: 1;
+  }
+}

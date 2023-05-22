@@ -1,0 +1,96 @@
+@import 'styles/mixins';
+
+.root {
+  @include centralize;
+  margin: 0 12px;
+
+  @include tablet-landscape {
+    margin-right: 24px;
+  }
+}
+.indicator {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+
+  &.success {
+    background-color: var(--color-success-50);
+  }
+
+  &.error {
+    background-color: var(--color-error-60);
+  }
+
+  &.warn {
+    background-color: var(--color-error-30);
+  }
+}
+
+.tooltipWrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+}
+
+.tooltipStatus {
+  margin: 4px 0;
+  text-transform: capitalize;
+}
+
+.tooltipRow {
+  position: relative;
+  text-align: left;
+  width: 100%;
+
+  &:not(:last-of-type) {
+    margin-bottom: 4px;
+  }
+
+  &:last-of-type {
+    margin-left: 24px;
+    text-align: right;
+  }
+
+  h3 {
+    margin: 0 0 4px;
+  }
+}
+
+.overlay {
+  background-color: var(--color-neutral-70);
+  border-radius: 50px;
+  height: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .handledMin {
+    background-color: transparent;
+    border-radius: 50%;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 8px;
+  }
+
+  .handled {
+    background-color: transparent;
+    border-radius: 50px;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+  }
+}
+
+.row {
+  display: flex;
+  margin-top: 12px;
+}
+
+.value {
+  white-space: nowrap;
+}

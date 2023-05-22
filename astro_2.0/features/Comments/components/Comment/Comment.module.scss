@@ -1,0 +1,80 @@
+@import 'styles/typography';
+
+.root {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 3px 2px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  padding: 24px 24px 12px;
+  position: relative;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.replies {
+  align-items: center;
+  color: var(--color-neutral-70);
+  display: flex;
+
+  .repliesToggle {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .toggleIcon {
+    margin-left: 8px;
+    width: 24px;
+  }
+}
+
+.replies:hover {
+  .toggleIcon {
+    color: var(--color-primary-50);
+  }
+}
+
+.right {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+
+.dislike {
+  transform: rotateX(180deg);
+}
+
+.delete,
+.edit {
+  color: var(--color-neutral-60);
+  margin-right: 24px;
+
+  &:hover {
+    color: var(--color-primary-50);
+  }
+}
+
+.replyButton {
+  margin-left: 24px;
+}
+
+.repliesWrapper {
+  margin: 12px 0 0 48px;
+}
+
+.reply {
+  border-top: 1px solid var(--color-neutral-40);
+  padding-top: 18px;
+}
+
+.replyInputWrapper {
+  margin-top: 24px;
+}

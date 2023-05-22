@@ -1,0 +1,123 @@
+:root {
+  // TODO: Use step for color variants (Waiting for designer response)
+  // BRAND COLOURS
+  --color-brand-black: #201f1f;
+  --color-brand-neon-yellow: #e1fc31;
+  --color-brand-purple: #6038d0;
+  --color-brand-purple-light: #e8e0ff;
+  --color-brand-blurple-light: #dbdbff;
+  --color-brand-pink: #f6e3dd;
+  --color-brand-coral-red: #ff8743;
+  --color-brand-green: #19d992;
+  --color-brand-green-dark: #0c422a;
+
+  // PRIMARY PURPLE
+  --color-primary-10: #f7f5fc;
+  --color-primary-20: #e8e0ff;
+  --color-primary-30: #c1b0f1;
+  --color-primary-40: #8060d9;
+  --color-primary-50: #6038d0;
+  --color-primary-60: #4b28ab;
+  --color-primary-70: #381e80;
+  --color-primary-80: #251455;
+  --color-primary-90: #130a2b;
+  --color-primary: var(--color-primary-50);
+
+  // NEUTRALS
+  --color-white: #fff;
+  --color-neutral-10: #fafafa;
+  --color-neutral-20: #f5f5f5;
+  --color-neutral-30: #f0f0f0;
+  --color-neutral-40: #d9d9d9;
+  --color-neutral-50: #bfbfbf;
+  --color-neutral-60: #8c8c8c;
+  --color-neutral-70: #595959;
+  --color-neutral-80: #434343;
+  --color-neutral-85: #2c2c2c;
+  --color-neutral-90: #201f1f;
+  --color-black: #000;
+
+  // SUCCESS / GREEN
+  --color-success-5: #eefff9;
+  --color-success-10: #cff9ea;
+  --color-success-20: #9ff4d4;
+  --color-success-30: #6feebf;
+  --color-success-40: #3fe9aa;
+  --color-success-50: #19d992;
+  --color-success-60: #13a36e;
+  --color-success-70: #0c6d49;
+  --color-success-80: #063625;
+  --color-success-90: #052b1d;
+  --color-success: var(--color-success-50);
+
+  // ERROR / RED
+  --color-error-10: #fff3ec;
+  --color-error-20: #ffcfb4;
+  --color-error-30: #ffb78e;
+  --color-error-40: #ff9f69;
+  --color-error-50: #ff8743;
+  --color-error-60: #ff5e03;
+  --color-error-70: #c14600;
+  --color-error-80: #812f00;
+  --color-error-90: #401700;
+  --color-error: var(--color-error-50);
+
+  // INFO
+  --color-info: #9fe4f4;
+
+  // PENDING
+  --color-pending: #4d96d7;
+
+  // PASTEL (CHIPS)
+  --color-pastel-violet: #f0daff;
+  --color-pastel-blurple: #d6d6ff;
+  --color-pastel-blue: #dae9ff;
+  --color-pastel-turqoise: #daf8ff;
+  --color-pastel-green: #e9ffda;
+  --color-pastel-red: #ffdeda;
+  --color-pastel-orange: #ffebd6;
+  --color-pastel-yellow: #fbffda;
+  --color-pastel-lightorange: #ffeedb;
+  --color-pastel-lightgray: #f0f0f0;
+
+  // PASSIVE
+  --color-passive-gray: #d7dadd;
+  --color-passive-text-gray: #a2a4a7;
+
+  // MAIN
+  --color-main-gray: #8e8f91;
+  --color-main-dark: #3e4349;
+
+  // SHADOWS
+  --color-white-opacity-5: rgba(255, 255, 255, 0.5);
+  --color-white-opacity-10: rgba(255, 255, 255, 0.1);
+  --color-white-opacity-70: rgba(255, 255, 255, 0.7);
+  --color-black-opacity-005: rgba(0, 0, 0, 0.05);
+  --color-black-opacity-1: rgba(0, 0, 0, 0.1);
+  --color-black-opacity-3: rgba(0, 0, 0, 0.3);
+  --color-black-opacity-14: rgba(0, 0, 0, 0.14);
+  --color-black-opacity-25: rgba(0, 0, 0, 0.25);
+  --color-black-opacity-50: rgba(0, 0, 0, 0.5);
+  --color-brand-black-opacity-70: rgba(32, 31, 31, 0.7);
+  --color-in-progress-opacity-25: rgba(123, 97, 255, 0.25);
+  --color-approved-opacity-35: rgba(0, 187, 118, 0.35);
+  --color-rejected-opacity-25: rgba(255, 135, 67, 0.25);
+  --color-rejected-opacity-35: rgba(255, 135, 67, 0.35);
+  --color-expired-opacity-25: rgba(140, 140, 140, 0.25);
+  --color-removed-opacity-25: rgba(32, 32, 32, 0.25);
+  --color-shadow-thumb: rgba(0, 0, 0, 0.4);
+
+  --color-blue-50: #0d41e1;
+
+  // FONTS
+  --font-family-primary: 'Inter', sans-serif;
+  --font-family-secondary: 'Open Sans', sans-serif;
+  --font-family-tertiary: 'Rubik', sans-serif;
+
+  // CONSTANTS
+  --header-height: 72px;
+  // 3.0
+  --app-header-height: 64px;
+  --app-footer-height: 64px;
+  --color-background: var(--color-white);
+}

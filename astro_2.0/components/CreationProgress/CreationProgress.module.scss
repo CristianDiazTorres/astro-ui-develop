@@ -1,0 +1,19 @@
+@import 'styles/mixins';
+
+.root {
+  display: flex;
+  font-size: 14px;
+  height: fit-content;
+  margin-bottom: 24px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+
+  @include tablet-landscape {
+    flex-direction: column;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

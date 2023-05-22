@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Side filter Should render component 1`] = `
+<div>
+  <div
+    class="categoriesListRoot"
+  >
+    <p
+      class="categoriesListTitle"
+    >
+      Hello World!
+    </p>
+    <ul
+      class="categoriesList"
+      style="--filter-active-transform: 0%;"
+    >
+      <li
+        class="categoriesListItemWrapper"
+      >
+        <a
+          class="categoriesListItem categoriesListItemSelected"
+          href="/?="
+          tabindex="0"
+        >
+          feed.filters.all
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

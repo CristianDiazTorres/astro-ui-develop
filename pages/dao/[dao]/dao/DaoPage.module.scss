@@ -1,0 +1,51 @@
+@import 'styles/mixins';
+
+.root {
+  display: grid;
+  grid-row-gap: 24px;
+  grid-template-areas:
+    'breadcrumbs'
+    'header'
+    'navigation'
+    'dashboard';
+  grid-template-columns: 1fr;
+  padding-top: 16px;
+
+  @include tablet-landscape {
+    padding-top: 56px;
+  }
+}
+
+.breadcrumbs {
+  display: none;
+  grid-area: breadcrumbs;
+
+  @include tablet-landscape {
+    display: block;
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.navigation {
+  grid-area: navigation;
+}
+
+.pageWrapper {
+  margin-top: 24px;
+}
+
+.createProposal {
+  margin-top: 40px;
+}
+
+.warningWrapper {
+  margin-top: 64px;
+}
+
+.dashboard {
+  grid-area: dashboard;
+  margin: 24px 0;
+}

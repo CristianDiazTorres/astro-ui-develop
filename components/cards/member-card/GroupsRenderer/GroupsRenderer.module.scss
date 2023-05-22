@@ -1,0 +1,38 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  align-items: center;
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.selectedMeasure {
+  display: flex;
+  flex: 1;
+}
+
+.selectedMeasure .selectedWrapper {
+  margin-right: 4px;
+}
+
+.selectedMeasure {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+.selectedMeasure > div {
+  visibility: hidden;
+}
+
+.collapsedLabel {
+  visibility: hidden;
+}
+
+.collapsedLabel.visible {
+  visibility: visible;
+}

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Locales Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <button
+      class="btn tertiary sizeSmall locale"
+      type="button"
+    >
+      <img
+        class="flag"
+        data-testid="circle-country-flag"
+        height="100"
+        src="https://hatscripts.github.io/circle-flags/flags/us.svg"
+        title="us"
+      />
+       
+      en
+    </button>
+    <button
+      class="btn tertiary sizeSmall locale"
+      type="button"
+    >
+      <img
+        class="flag"
+        data-testid="circle-country-flag"
+        height="100"
+        src="https://hatscripts.github.io/circle-flags/flags/ru.svg"
+        title="ru"
+      />
+       
+      ru
+    </button>
+  </div>
+</div>
+`;

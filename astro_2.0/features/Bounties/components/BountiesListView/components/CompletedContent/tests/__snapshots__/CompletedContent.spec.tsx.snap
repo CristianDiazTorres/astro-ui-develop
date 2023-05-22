@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompletedContent Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <span
+      class="slotsWrapper"
+    >
+      <span
+        class="slotActive"
+      >
+        10
+      </span>
+      <span
+        class="slot"
+      >
+         / 
+        10
+      </span>
+    </span>
+  </div>
+</div>
+`;

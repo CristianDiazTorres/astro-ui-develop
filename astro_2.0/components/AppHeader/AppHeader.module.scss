@@ -1,0 +1,65 @@
+@use 'styles/breakpoints';
+@import 'styles/mixins';
+
+.root {
+  align-items: center;
+  background-color: var(--color-white);
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  @include desktop {
+    padding: 0 48px;
+  }
+
+  @include large-desktop {
+    padding: 0 72px;
+  }
+
+  @media (min-width: 1600px) {
+    padding: 0 120px;
+  }
+}
+
+.logo {
+  display: none;
+
+  &.mobileLogo {
+    display: block;
+
+    @include astro-desktop {
+      display: none;
+    }
+  }
+}
+
+.centralPart {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+
+  &.withoutNoties {
+    margin-right: 8px;
+  }
+}
+
+.search {
+  position: absolute;
+  right: 0;
+
+  @include astro-desktop {
+    position: initial;
+    right: auto;
+  }
+}
+
+.bell {
+  margin-right: 12px;
+}

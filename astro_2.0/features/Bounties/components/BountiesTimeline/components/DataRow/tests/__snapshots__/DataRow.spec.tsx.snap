@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataRow Should render component 1`] = `
+<div>
+  <div
+    class="dataColumns"
+  >
+    <div
+      class="column dataColumn"
+      data-milestone="false"
+    />
+  </div>
+</div>
+`;

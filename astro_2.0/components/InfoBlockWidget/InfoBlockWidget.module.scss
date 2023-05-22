@@ -1,0 +1,94 @@
+@use 'styles/breakpoints';
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.label {
+  @extend %caption1;
+  color: var(--color-neutral-60);
+}
+
+.root {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.block {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+
+  &:first-of-type {
+    margin-bottom: 4px;
+  }
+}
+
+.iconHolder {
+  margin-left: 10px;
+  padding-bottom: 2px;
+}
+
+.infoIcon {
+  color: var(--color-brand-purple);
+  height: 14px;
+  width: 14px;
+}
+
+.positiveIcon {
+  color: var(--color-success-70);
+  height: 16px;
+  width: 16px;
+}
+
+.warningIcon {
+  color: var(--color-error-70);
+  height: 16px;
+  width: 16px;
+}
+
+.tooltip {
+  background: var(--color-neutral-80);
+  border-radius: 4px;
+  color: var(--color-white);
+}
+
+.infoTooltip {
+  background: var(--color-neutral-80);
+}
+
+.positiveTooltip {
+  background: var(--color-success-70);
+}
+
+.warningTooltip {
+  background: var(--color-error-80);
+}
+
+.valueSmall {
+  @extend %title3;
+  color: var(--color-neutral-90);
+  white-space: initial;
+  width: 100%;
+}
+
+.valueLarge {
+  color: var(--color-neutral-90);
+  font-family: var(--font-family-primary);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 28px;
+  text-align: left;
+  width: 100%;
+}
+
+@media screen and (max-width: #{breakpoints.$screen-sm}px) {
+  .valueLarge {
+    font-size: 16px;
+  }
+}

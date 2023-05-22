@@ -1,0 +1,57 @@
+@import 'styles/typography';
+
+.root {
+  background: var(--color-white);
+  border: 1px solid var(--color-neutral-40);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.chart {
+  padding: 24px 0 24px 24px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 24px;
+}
+
+.legendItem {
+  align-items: center;
+  display: flex;
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+}
+
+.legendIndicator {
+  border-radius: 50%;
+  height: 8px;
+  margin-right: 4px;
+  width: 8px;
+
+  &.approved {
+    background-color: var(--color-success-50);
+  }
+
+  &.pending {
+    background-color: var(--color-pending);
+  }
+
+  &.inProgress {
+    background-color: var(--color-primary-50);
+  }
+
+  &.rejected {
+    background-color: var(--color-error-70);
+  }
+}
+
+.label {
+  @extend %caption1;
+  color: var(--color-brand-black);
+}

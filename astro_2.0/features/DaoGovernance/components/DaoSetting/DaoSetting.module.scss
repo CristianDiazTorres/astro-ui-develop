@@ -1,0 +1,49 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //max-width: 480px;
+  padding-bottom: 48px;
+
+  @include tablet-portrait {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.label {
+  @extend %heading2;
+  line-height: 24px;
+  margin-bottom: 24px;
+
+  @include tablet-portrait {
+    margin-bottom: 0;
+    padding-right: 35px;
+  }
+}
+
+.actionButton {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-left: auto;
+
+  @include mobile-only {
+    margin-left: 0;
+
+    svg {
+      display: none;
+    }
+  }
+
+  svg {
+    height: 24px;
+    margin-left: 8px;
+    width: 24px;
+  }
+}

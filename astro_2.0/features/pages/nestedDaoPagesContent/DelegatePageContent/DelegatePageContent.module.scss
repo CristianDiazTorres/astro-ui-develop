@@ -1,0 +1,288 @@
+@use 'styles/breakpoints';
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.root {
+  h1 {
+    margin: 32px 0 24px;
+  }
+}
+
+.topWidgets {
+  display: flex;
+  flex: 1;
+
+  margin-bottom: 12px;
+}
+
+.widgets {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+
+  margin-bottom: 24px;
+
+  @include tablet-landscape {
+    grid-template-columns: 1.5fr repeat(2, 1fr);
+  }
+
+  &.widgetExpanded {
+    margin-bottom: 12px;
+  }
+}
+
+.goalChartWrapper {
+  background-color: var(--color-white);
+  border-radius: 5px 0 5px 5px;
+  box-shadow: 3px 2px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+
+  margin-bottom: 24px;
+  padding: 24px 24px 32px;
+}
+
+.expandableWidget {
+  position: relative;
+}
+
+.expandableWidget.expanded {
+  border-radius: 5px 5px 0 0;
+
+  &::after {
+    background-color: var(--color-white);
+    content: '';
+    height: 18px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.secondaryWidget {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:not(:last-of-type)::after {
+    background-color: var(--color-neutral-50);
+    bottom: 12px;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 1px;
+  }
+}
+
+.content {
+  @include large-desktop {
+    background-color: var(--color-white);
+    border-radius: 5px;
+
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.contentHeader {
+  align-items: center;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-areas:
+    'title title'
+    'add add'
+    'sort search';
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+
+  @include tablet-landscape {
+    grid-template-areas:
+      'title title .'
+      'sort search add';
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  @include large-desktop {
+    display: flex;
+    padding: 20px 24px;
+  }
+
+  .title {
+    @extend %subtitle1;
+    grid-area: title;
+  }
+
+  .search {
+    grid-area: search;
+    margin-left: auto;
+  }
+
+  .sorting {
+    grid-area: sort;
+  }
+
+  .add {
+    grid-area: add;
+  }
+
+  .sorting,
+  .search {
+    margin-right: 24px;
+  }
+}
+
+.addButton {
+  @include centralize;
+  @include ellipse-text;
+  width: 100%;
+
+  @include tablet-landscape {
+    width: auto;
+  }
+}
+
+.sorting {
+  @extend %body2;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 120px;
+
+  @include large-desktop {
+    justify-content: flex-end;
+  }
+
+  .label {
+    color: var(--color-neutral-60);
+    margin-right: 4px;
+  }
+
+  .menu {
+    margin-top: 12px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.primaryValue {
+  font-size: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.secondaryValue {
+  @include ellipse-text;
+  font-size: 24px;
+  font-weight: 400;
+  max-width: 120px;
+}
+
+.sub {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.depositWidget {
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
+.widgetButton.widgetButton {
+  @include centralize;
+
+  background-color: var(--color-neutral-30);
+  border-radius: 5px;
+  height: 32px;
+  margin-left: 12px;
+  width: 32px;
+}
+
+.alignRight {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+
+.editButtonWrapper {
+  @include centralize;
+  border-radius: 50%;
+  bottom: -16px;
+  height: 32px;
+  position: absolute;
+  right: -16px;
+  transition: transform 0.4s ease-out;
+  width: 32px;
+  z-index: 1;
+
+  &.visible {
+    transform: translateX(-40px);
+  }
+}
+
+.editButton {
+  @include centralize;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary-20);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 32px;
+  position: relative;
+  transition: transform 0.2s ease-out;
+  width: 32px;
+  z-index: 1;
+
+  &:hover {
+    background-color: var(--color-primary-30);
+  }
+
+  &.visible {
+    transform: translateX(-40px);
+  }
+}
+
+.chartToggle {
+  @include centralize;
+  background-color: var(--color-primary-20);
+  border-radius: 50%;
+  bottom: -16px;
+  cursor: pointer;
+  height: 32px;
+  position: absolute;
+  right: -16px;
+  width: 32px;
+  z-index: 1;
+
+  &:hover {
+    background-color: var(--color-primary-30);
+  }
+}
+
+.toggleIcon {
+  color: var(--color-primary-50);
+}
+
+.buttonIcon {
+  margin-right: 8px;
+}
+
+.warning {
+  margin-bottom: 24px;
+
+  .title {
+    @extend %title3;
+  }
+
+  .text {
+    @extend %caption1;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @include tablet-landscape {
+    display: flex;
+  }
+}

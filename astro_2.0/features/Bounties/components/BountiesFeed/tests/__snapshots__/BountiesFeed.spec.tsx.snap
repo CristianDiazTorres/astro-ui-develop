@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BountiesFeed Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="row additionalFilters"
+    >
+      <div
+        class="root"
+      >
+        <div
+          class="container"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="iconHolder"
+          >
+            <svg
+              class="icon"
+            >
+              <use
+                href="/_next/undefined"
+              />
+            </svg>
+          </div>
+          <input
+            class="input"
+            placeholder="searchBountyPlaceholder"
+            tabindex="0"
+            type="text"
+            value=""
+          />
+          <div
+            class="anchor"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="row content"
+    >
+      <div
+        class="categoriesListRoot filter"
+      >
+        <p
+          class="categoriesListTitle"
+        >
+          feed.filters.chooseAFilter
+        </p>
+        <ul
+          class="categoriesList"
+          style="--filter-active-transform: 0%;"
+        >
+          <li
+            class="categoriesListItemWrapper"
+          >
+            <a
+              class="categoriesListItem"
+              href="/?bountyPhase=proposalPhase"
+              tabindex="0"
+            >
+              Proposal Phase
+            </a>
+          </li>
+          <li
+            class="categoriesListItemWrapper"
+          >
+            <a
+              class="categoriesListItem"
+              href="/?bountyPhase=availableBounty"
+              tabindex="0"
+            >
+              Available Bounty
+            </a>
+          </li>
+          <li
+            class="categoriesListItemWrapper"
+          >
+            <a
+              class="categoriesListItem"
+              href="/?bountyPhase=inProgress"
+              tabindex="0"
+            >
+              In Progress
+            </a>
+          </li>
+          <li
+            class="categoriesListItemWrapper"
+          >
+            <a
+              class="categoriesListItem"
+              href="/?bountyPhase=completed"
+              tabindex="0"
+            >
+              Completed
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="container"
+      >
+        <div
+          class="root listWrapper"
+        >
+          <div
+            class="infinite-scroll-component__outerdiv"
+          >
+            <div
+              class="infinite-scroll-component "
+              style="height: auto; overflow: initial;"
+            >
+              <div
+                class="loading"
+              >
+                <div
+                  class="root"
+                >
+                  <div
+                    class="image"
+                  />
+                  <div
+                    class="title"
+                  >
+                    noDataFound
+                  </div>
+                  <div
+                    class="desc"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="selection"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="hideControlButtonWrapper"
+    />
+  </div>
+</div>
+`;

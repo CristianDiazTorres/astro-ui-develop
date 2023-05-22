@@ -1,0 +1,52 @@
+@import 'styles/typography';
+@import 'styles/mixins';
+
+.group {
+  @include card-shadow;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  margin-left: -24px;
+  padding: 0;
+  width: calc(100% + 48px);
+
+  @include tablet-portrait {
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.groupHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  position: relative;
+
+  &::after {
+    background-color: var(--color-neutral-30);
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.groupTitle {
+  @include font(16px, 24px, 500);
+}
+
+.platformSettings {
+  margin-bottom: 24px;
+}
+
+.settingsItem {
+  padding: 0 12px 24px;
+
+  &.muted {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

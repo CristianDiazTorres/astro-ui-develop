@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineHeader Should render component 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <button
+      class="btn transparent sizeBlock control open"
+      type="button"
+    >
+      <svg
+        class="controlIcon open"
+      >
+        <use
+          href="/_next/undefined"
+        />
+      </svg>
+    </button>
+    <div>
+      <div>
+        <span
+          class="iconWrapper"
+        >
+          <svg
+            class="icon"
+          >
+            <use
+              href="/_next/undefined"
+            />
+          </svg>
+          <span
+            class="label"
+          >
+            Proposal Created
+          </span>
+        </span>
+        <span
+          class="iconWrapper"
+        >
+          <svg
+            class="icon"
+          >
+            <use
+              href="/_next/undefined"
+            />
+          </svg>
+          <span
+            class="label"
+          >
+            Bounty Created
+          </span>
+        </span>
+        <span
+          class="iconWrapper"
+        >
+          <svg
+            class="icon"
+          >
+            <use
+              href="/_next/undefined"
+            />
+          </svg>
+          <span
+            class="label"
+          >
+            Claim
+          </span>
+        </span>
+        <span
+          class="iconWrapper"
+        >
+          <svg
+            class="icon"
+          >
+            <use
+              href="/_next/undefined"
+            />
+          </svg>
+          <span
+            class="label"
+          >
+            Pending Approval
+          </span>
+        </span>
+        <span
+          class="iconWrapper"
+        >
+          <svg
+            class="icon"
+          >
+            <use
+              href="/_next/undefined"
+            />
+          </svg>
+          <span
+            class="label"
+          >
+            Claim Deadline
+          </span>
+        </span>
+        <span
+          class="iconWrapper"
+        >
+          <svg
+            class="icon"
+          >
+            <use
+              href="/_next/undefined"
+            />
+          </svg>
+          <span
+            class="label"
+          >
+            Complete Bounty
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

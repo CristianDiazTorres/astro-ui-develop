@@ -1,0 +1,284 @@
+@import 'styles/mixins';
+@import 'styles/typography';
+
+.root {
+  align-items: flex-end;
+  background-color: var(--color-brand-black);
+  color: var(--color-white);
+  display: flex;
+  grid-area: footer;
+  height: 100%;
+  //padding-bottom: 60px;
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  width: 100%;
+}
+
+.social {
+  align-items: center;
+  display: flex;
+  grid-area: social;
+  margin-bottom: 18px;
+
+  > a {
+    margin-right: 24px;
+  }
+}
+
+.icon {
+  &:hover {
+    color: var(--color-success);
+  }
+}
+
+.report {
+  grid-area: report;
+}
+
+.progress {
+  display: none;
+  grid-area: progress;
+  margin-top: 8px;
+
+  @include tablet-landscape {
+    text-align: right;
+  }
+}
+
+.repo {
+  grid-area: repo;
+}
+
+.version {
+  grid-area: version;
+}
+
+.devLink {
+  @include font(12px, 18px, 500);
+  color: var(--color-white);
+  display: block;
+  margin-bottom: 12px;
+
+  &:hover {
+    color: var(--color-success);
+  }
+}
+
+.divider {
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+.links {
+  @include font(0.75em, 18px, 400);
+  color: var(--color-neutral-60);
+  column-gap: 24px;
+  display: flex;
+  flex-direction: column;
+  grid-area: links;
+  margin-top: 16px;
+}
+
+.link {
+  @extend %subtitle5;
+  flex-shrink: 0;
+  transition: color 0.4s;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--color-primary-30);
+  }
+}
+
+.copyright {
+  @extend %caption3;
+  color: var(--color-neutral-60);
+  grid-area: copyright;
+  margin: 24px 0 16px;
+  white-space: break-spaces;
+}
+
+.terms {
+  grid-area: terms;
+}
+
+.release {
+  @extend %caption3;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  grid-area: release;
+  //margin-top: 16px;
+
+  span {
+    flex-shrink: 0;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+}
+
+.locale {
+  grid-area: locale;
+  margin: 16px 0 32px;
+}
+
+.bottom {
+  padding: 24px;
+  width: 100%;
+
+  @include desktop {
+    padding: 46px 48px 30px;
+  }
+
+  @include large-desktop {
+    padding: 54px 120px 36px;
+  }
+
+  .wrapper {
+    grid-template-areas:
+      'invitation'
+      'social'
+      'report'
+      'version'
+      'repo'
+      'links'
+      'release'
+      'terms'
+      'copyright'
+      'locale';
+
+    max-width: 1130px;
+
+    @include tablet-landscape {
+      grid-gap: 32px;
+      grid-template-areas:
+        'invitation invitation invitation'
+        'social social release'
+        'links report copyright'
+        'version . progress';
+      grid-template-columns: 2fr 1fr 3fr;
+    }
+
+    @include desktop {
+      grid-template-columns: 3fr 1fr 3fr;
+    }
+  }
+
+  .links {
+    @include tablet-landscape {
+      margin-top: 0;
+    }
+  }
+
+  .link {
+    color: var(--color-primary-30);
+  }
+
+  .link:hover {
+    color: var(--color-primary-40);
+  }
+
+  .social {
+    @include tablet-landscape {
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      margin-bottom: 20px;
+    }
+  }
+
+  .report {
+    @include tablet-landscape {
+      line-height: 1;
+    }
+  }
+
+  .release {
+    @include tablet-landscape {
+      @include font(1em, 24px, 400);
+      justify-self: end;
+      margin-top: 0;
+
+      @include desktop {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .logo {
+    @include tablet-landscape {
+      width: 135px;
+    }
+  }
+
+  .copyright {
+    @include tablet-landscape {
+      justify-self: end;
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+
+  .report,
+  .version,
+  .progress {
+    @include tablet-landscape {
+      margin-top: 0;
+    }
+  }
+}
+
+.side {
+  bottom: 0;
+  left: 0;
+  padding: 16px 32px;
+  width: 100%;
+
+  @include astro-mobile {
+    border-radius: 8px;
+    box-shadow: 3px 2px 24px var(--color-black-opacity-1);
+    height: fit-content;
+  }
+
+  .wrapper {
+    grid-template-areas:
+      'social'
+      'report'
+      'version'
+      'repo'
+      'links'
+      'release'
+      'terms'
+      'copyright'
+      'locale';
+  }
+
+  .progress {
+    display: block;
+    text-align: left;
+  }
+}
+
+.mobile {
+  color: var(--color-brand-black);
+  padding-bottom: 0;
+
+  .devLink,
+  .copyright {
+    color: var(--color-brand-black);
+  }
+
+  .icon:hover {
+    color: initial;
+  }
+
+  .locale {
+    margin: 16px 0;
+  }
+}
