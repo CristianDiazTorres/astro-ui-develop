@@ -16,8 +16,6 @@ Astro is a platform for launching Decentralized Autonomous Organizations. DAOs a
 
 #### Status
 
-[Change Log](https://github.com/near-daos/astro-ui/releases/latest)
-
 ![img.png](img.png)
 
 ###### Install dependencies
